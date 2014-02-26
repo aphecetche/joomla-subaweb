@@ -1,0 +1,66 @@
+body {
+  margin: 1em 2em;
+}
+
+.job.list
+{
+  .font-size-with-printbaseline(16);
+}
+ 
+#job {
+  .font-size-with-printbaseline(8,12);
+}
+
+.job.list .item
+{
+    width: 100%;
+    float: left;
+    clear: both;
+    padding: 0.5em;
+    border-bottom: 1px solid #DDD;
+}
+
+#job p {
+      text-align: justify;
+      .font-size-with-printbaseline(8,12);
+      margin-top: 1em;
+}
+
+
+#job h1 {
+  text-align: center;
+  text-transform : uppercase;
+  font-weight: bold;
+  .font-size-with-printbaseline(10);
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#job h2 {
+  font-weight: bold;
+  .font-size-with-printbaseline(9);
+
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-top: 1px solid @subatechdarkgray;
+}
+
+.registered .job.list .description
+{
+  width: 85%;
+  float: left;
+}
+
+#job p.keywords {
+  width: 100%;
+  &:before {
+    font-weight: bold;
+    content:"Mots clés : ";
+  }
+  .font-size-with-printbaseline(8);
+  float: left;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  border-top: 1px solid @subatechlightgray;
+}
+

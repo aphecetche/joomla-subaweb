@@ -1,0 +1,17 @@
+V2.2
+
+- styling a bit the job(s) views
+- adding the name of the group on top of the right menu for all groups under "recherche"
+
+V2.0
+
+- using mootools everywhere instead of jQuery, to avoid loading two big JS libraries
+- start using a specific LESS file for IE (as a temporary measure until we find a better way, or for ever if we don't)
+
+V1.1
+
+- CSS Correcting labels not displaying correctly for "new seminar" form for seminar type (spécialisé, généraliste, ita)
+ where only the first radio box was visible
+
+- JS correcting the expanded navigation, which were auto-closing after a resize to small size (where
+ it is removed) and then back to "normal" size (where it was added back but events were not properly handled)

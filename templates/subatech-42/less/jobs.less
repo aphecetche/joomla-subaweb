@@ -1,0 +1,75 @@
+.job.list
+{
+  .font-size-with-baseline(16);
+}
+ 
+.job.list .item
+{
+    width: 100%;
+    float: left;
+    clear: both;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #DDD;
+}
+
+#job h1 {
+   text-align: center;
+  text-transform : uppercase;
+  font-weight: bold;
+  margin-top: @baselinepx*2;
+  margin-bottom: @baselinepx*2;
+}
+
+#job h2 {
+  font-weight: bold;
+  float: left;
+  margin: 0;
+  padding-top: @baselinepx;
+  padding-bottom: @baselinepx;
+  border-top: 1px solid @subatechdarkgray;
+  width: 100%;
+}
+
+.registered .job.list .description
+{
+  width: 85%;
+  float: left;
+}
+
+
+p.keywords {
+  width: 100%;
+  &:before {
+    content:"Mots clés : ";
+  }
+  .font-size(12);
+  float: left;
+  padding-top: @baselinepx;
+  border-top: 1px solid @subatechlightgray;
+}
+
+.job ul {
+  margin-bottom: @baselinepx; 
+  list-style-type: square;
+  margin-left: 0px;
+}
+
+.job.list p.place {
+  &:first-of-type {
+  padding: 0;
+  margin: 0 !important;    
+  }
+    padding: 0;
+  margin: 0;
+  .font-size-with-baseline(12);
+}
+
+span.jobType {
+  text-transform: uppercase;
+  &:before {
+    content: '[ ';
+  }
+  &:after {
+    content: ' ] ';
+  }
+}

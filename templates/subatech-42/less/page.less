@@ -1,0 +1,86 @@
+.skipLink {
+  display: none;
+}
+
+nav ul {
+  margin:0; 
+  padding: 0;
+  li {
+   list-style: none;
+   ul {
+    display: none;
+    }
+  }
+}
+
+
+/* LOGO =================================================== */
+
+@logo-height: 67px;
+@logo-width: @logo-height*2.09;
+
+#logo {
+   h1 {
+    padding: 0;
+    margin: 0;
+    background: url("../images/logo-subatech-h67.png");
+    width: @logo-width;
+    height: @logo-height;
+    border: 0;
+    .image-replacement2();
+  }
+   a:focus,a:hover {
+    background: transparent;
+   }
+}
+
+#bannerimage {
+  float: none;
+  overflow: hidden;
+  background: @subatechbasegreen;
+  height: 0px;
+  border: 0;
+}
+
+#nav-primary {
+  border-bottom: 1px solid @subatechlightgray;
+}
+
+#content {
+  padding-bottom: 2*@baselinepx;
+}
+
+#search {
+  display: none;
+}
+
+#footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-top: @baselinepx*2;
+  border-top: 1px dashed @subatechlightgray;
+  border-bottom: 1px solid @subatechlightgray;
+}
+
+#nav-breadcrumbs {
+  display: none;
+}
+
+/* ENDNOTE =================================================== */
+
+#endnote
+{
+float: left;
+width: 100%;
+  a,span {
+    background: transparent;
+    .font-size-with-baseline(11);
+    margin: 6px auto 0px auto;
+    text-align: center;
+    color: @subatechdarkgray;
+  }
+  a {
+        display: block;
+  }
+}

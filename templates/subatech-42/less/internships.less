@@ -1,0 +1,97 @@
+.internship.list
+{
+  .font-size-with-baseline(16);
+}
+ 
+.internship.list .item
+{
+    width: 100%;
+    float: left;
+    clear: both;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #DDD;
+}
+
+header#internship-logos {
+  margin-top: @baselinepx;
+}
+
+#internship-logos img.left {
+  float: left;  
+}
+#internship-logos img.middle {
+  float: right; 
+}
+#internship-logos img.right {
+  float: right;  
+}
+
+header#internship-logos {
+  .clearfix;  
+}
+
+#internship h1 {
+   text-align: center;
+  text-transform : uppercase;
+  font-weight: bold;
+  margin-top: @baselinepx*2;
+  margin-bottom: @baselinepx*2;
+}
+
+#internship h2 {
+  font-weight: bold;
+  float: left;
+  margin: 0;
+  padding-top: @baselinepx;
+  padding-bottom: @baselinepx;
+  border-top: 1px solid @subatechdarkgray;
+  width: 100%;
+}
+
+.registered .internship.list .description
+{
+  width: 85%;
+  float: left;
+}
+
+dl#host {
+  width: 100%;
+  float: left;
+  margin-bottom: @baselinepx;  
+}
+
+#host dt {
+  float: left;
+  clear: left;
+}
+
+#host dt:after {
+  content : ":";
+}
+
+#host dd {
+  float: left;
+  clear: right;
+  padding-left: @padding-side/3;
+}
+
+#internship p.keywords {
+  width: 100%;
+  &:before {
+    content:"Mots clés : ";
+  }
+  .font-size(12);
+  float: left;
+  padding-top: @baselinepx;
+  border-top: 1px solid @subatechlightgray;
+}
+
+.internship.list p.place {
+  &:first-of-type {
+  padding: 0;
+  margin: 0 !important;    
+  }
+    padding: 0;
+  margin: 0;
+  .font-size-with-baseline(12);
+}

@@ -1,0 +1,44 @@
+
+/* Print =================================================== */
+
+@import "reset-enhanced.less";
+@import "fonts.less";
+@import "variables.less";
+@import "mixins.less";
+@include "site.less";
+
+body {
+  font-family: "OpenSansLight", helvetica;  
+}
+
+h1,h2,h3 {
+    text-rendering : optimizelegibility; 
+  font: inherit;
+}
+
+h1
+{
+    font-variant: small-caps;
+    .font-size-with-printbaseline(16);
+    color: @subatechprintblue;
+    clear: both;
+}
+
+h2
+{
+        .font-size-with-printbaseline(12);
+    color: @subatechprintblue;
+    clear: both;
+}
+
+h3
+{
+  .font-size-with-printbaseline(9);
+    color: @subatechprintblue;
+}
+    
+@import "seminars-print.less";
+@import "jobs-print.less";
+
+@import "internships-print.less";
+

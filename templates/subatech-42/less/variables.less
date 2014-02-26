@@ -1,0 +1,188 @@
+
+/* Variables =================================================== */
+
+// 1. ROOT 					==============================
+
+@bodycolor : @white;
+
+// 2. TYPOGRAPHY 			==============================
+
+@textcolor : @black;
+@basefont : "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//@textcolor: #222;
+//@basefont : "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@basefontsize : 14;
+
+//@basefont : Georgia, Times, "Times New Roman", serif;
+//@basefontsize : 16;
+
+@baseline: 24;
+@baselinepx: @baseline*1px;
+
+@printbaseline: 16;
+
+@baseheadingfont : "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baseheadingfontweight : inherit;
+@baseheadingfontcolor : inherit;
+
+@altfont : Cambria, Georgia, Times, "Times New Roman";
+@altlineheight : 1.35em;
+
+@codefont : Monaco, Courier New, monospace;
+
+// 3. COLOUR 				==============================
+
+//@subatechbaseblue: rgb(8,96,178);
+@subatechbaseblue: rgb(7,102,173);
+@subatechbasegreen: rgb(152,202,52);
+@subatechbasegray: rgb(155,155,155);
+
+@basecolor 		: @subatechbaseblue;
+@compcolor 		: spin(@basecolor, 180); 
+
+@bordercolor : @subatechlightestblue;
+
+// blue shades
+
+@subatechlightblue: lighten(@subatechbaseblue,10%);
+@subatechlighterblue: lighten(@subatechbaseblue,30%);
+@subatechlightestblue: lighten(@subatechbaseblue,45%);
+@subatechdarkblue: darken(@subatechbaseblue,15%);
+@subatechdarkerblue: darken(@subatechbaseblue,30%);
+@subatechdarkestblue: darken(@subatechbaseblue,45%);
+
+@subatechprintblue: #095197;
+
+// green shades
+
+@subatechlightgreen: lighten(@subatechbasegreen,15%);
+@subatechlightergreen: lighten(@subatechbasegreen,30%);
+@subatechlightestgreen: lighten(@subatechbasegreen,45%);
+@subatechdarkgreen: darken(@subatechbasegreen,15%);
+@subatechdarkergreen: darken(@subatechbasegreen,30%);
+@subatechdarkestgreen: darken(@subatechbasegreen,45%);
+
+// gray shades
+
+@subatechlightgray: lighten(@subatechdarkgray,15%);
+@subatechlightergray: lighten(@subatechdarkgray,30%);
+@subatechlightestgray: lighten(@subatechdarkgray,49%);
+@subatechdarkgray: darken(@subatechbasegray,15%);
+@subatechdarkergray: darken(@subatechbasegray,30%);
+@subatechdarkestgray: darken(@subatechbasegray,45%);
+
+// Links
+
+@linkcolor 		    : @subatechbaseblue;
+
+@linkcolorhover 	: @linkcolor; 
+@linkcolorvisited : @linkcolorhover;
+@linkcolorfocus : @linkcolorhover;
+
+@linkbackgroundcolorhover: @subatechlightestgray;
+
+// greyscale
+
+@black 			: rgb(3,3,3);
+@darkgrey 		: lighten(@black, 25%);
+@grey 			: lighten(@black, 50%);
+@lightgrey 		: lighten(@black, 75%);
+@lightergrey 	: lighten(@black, 90%);
+@white 			: rgb(255,255,255);
+@offwhite : #ddd;
+
+// colour palettes
+
+@alertcolor 	: rgb(252,248,227);
+@errorcolor 	: rgb(218,79,73);
+@infocolor 		: rgb(217,237,247);
+@inverscolor 	: rgb(65,65,65);
+@successcolor 	: rgb(91,183,91);
+@warningcolor 	: rgb(250,167,50);
+
+// 4. TEXTURE 				==============================
+
+// alert
+
+@alertbordercolor	: darken(@alertcolor, 20%);
+@alertborderwidth 	: 1px;
+@alertborderstyle 	: solid;
+@alerttext			: darken(@alertcolor, 60%);
+
+// alert-error
+@alerterrorcolor 	: lighten(@errorcolor, 30%);
+@alerterrorborder  	: lighten(@errorcolor, 20%);
+@alerterrortext 	: @errorcolor; 
+
+// alert-info
+@alertinfocolor 	: @infocolor;
+@alertinfoborder  	: lighten(@infocolor, 20%);
+@alertinfotext 		: darken(@infocolor, 50%);  
+
+// alert-inverse
+@alertinversecolor 	: @inverscolor;
+@alertinverseborder : @black;
+@alertinversetext 	: @white;  
+
+// alert-success
+@alertsuccesscolor 	: lighten(@successcolor, 30%);
+@alertsuccessborder : lighten(@successcolor, 20%);
+@alertsuccesstext 	: darken(@successcolor, 20%); 
+
+// alert-warning
+@alertwarningcolor 	: lighten(@warningcolor, 30%);
+@alertwarningborder : lighten(@warningcolor, 20%);
+@alertwarningtext 	: darken(@warningcolor, 20%); 
+
+// badges 
+
+@badgebackground 	: @lightergrey;
+@badgecolor 		: @grey;
+
+// buttons
+
+@buttonbackground 	: @lightergrey;
+@buttonbordercolor 	: darken(@buttonbackground, 10%);
+@buttonbottombordercolor : darken(@buttonbordercolor, 10%);
+@buttoncolor 		: @darkgrey;
+@buttonborderwidth	: 1px;
+@buttonborderstyle	: solid;
+
+// boxes (well)
+
+@wellbackground		: lighten(@basecolor, 75%);
+@wellbordercolor	: darken(@wellbackground, 20%); 
+@wellborderwidth	: 1px;
+@wellborderstyle	: solid;
+@wellshadow			: darken(@wellbackground, 10%);
+@wellshadowblur		: 10px;
+
+// tables 
+
+@tablebackground 	: transparent;
+@tablestripe 		: @subatechlightgreen;
+@tablehover 		: @subatechlightgray;
+@tableborder 		: @subatechlightgray;
+@tableborderwidth	: 1px;
+@tableborderstyle	: solid;
+
+// forms 
+
+@inputbackground 	: @white; 
+@inputborder 		: lighten(@basecolor, 40%);
+@inputborderwidth	: 1px;
+@inputborderstyle	: solid;
+@inputhover 		: lighten(@basecolor, 20%);
+@inputfocus 		: @basecolor, 40%;
+@placeholdercolor 	: @lightgrey;
+
+// 6. LAYOUT 				==============================
+
+@gutterwidth : 20px;
+@padding-side: 30px;
+
+//  7. VENDOR-SPECIFIC 		==============================
+//  8. MODERNIZR 			==============================
+//  9. TEMPLATE SPECIFICS 	=============================

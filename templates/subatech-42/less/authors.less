@@ -1,0 +1,220 @@
+// rules for registerer users only
+
+// AUTHORS NAVIGATION ========================================
+
+#nav-authors {
+  ul {
+    border-bottom: 1px solid @subatechdarkblue;
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+    background: fade(violet,@debugtransparency);
+    li {
+      display: inline;
+      a {
+        padding: 0px 10px;
+      }
+    }
+  }
+}
+
+// WIDEN THE ONE COLUMN CONTENT AREA FOR REGISTERED USERS (EDITORS) ==========================
+
+.onecol.registered #content
+{
+margin: 0 auto;
+width: 85%;
+padding: 0px 7.5%;
+}
+
+// EDIT FORMS =============================
+
+/* ++++++++++++++  edit  ++++++++++++++ */
+legend
+{
+        padding:3px 5px;
+        border: 1px solid #DDD;
+}
+
+form#adminForm
+{
+
+}
+
+.edit form#adminForm fieldset
+{
+        padding:1.5em 1em;
+        margin:0.8em 0 1em 0;
+        border:solid 1px #ddd;
+      width: 100%;
+}
+
+.edit form#adminForm  legend
+{
+  font-weight:bold;
+  font-size: 200%;
+  color: @subatechbasegreen;
+}
+
+.formelm
+{
+        margin: 0.5em 0;
+}
+
+
+.formelm label
+{
+        display:inline-block;
+        vertical-align:top;
+}
+
+form#adminForm .formelm-area
+{
+        padding:5px 0
+}
+
+form#adminForm .formelm-area label
+{
+        vertical-align:top;
+        display:inline-block;
+        width:7.9em;
+}
+
+.formelm-buttons
+{
+        text-align:right;
+        margin-top:0.5em;
+}
+
+fieldset#jform_type.radio label
+{
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+
+fieldset#jform_type.radio.inputbox
+{
+    padding: @baselinepx/2 0;
+    margin: 0;
+    border: 0;
+}
+
+/* -- form validation */
+.invalid { border-color: #ff0000; }
+label.invalid { color: #ff0000; }
+
+/* -- buttons */
+#editor-xtd-buttons {
+        padding: 0px;
+}
+
+.button2-left,
+.button2-right,
+.button2-left div,
+.button2-right div {
+        float: left;
+}
+
+.button2-left a,
+.button2-right a,
+.button2-left span,
+.button2-right span {
+        display: block;
+
+        float: left;
+
+
+        color: #666;
+        cursor: pointer;
+}
+
+.button2-left span,
+.button2-right span {
+        cursor: default;
+        color: #999;
+}
+
+.button2-left .page a,
+.button2-right .page a,
+.button2-left .page span,
+.button2-right .page span {
+        padding: 0 6px;
+}
+
+.page span {
+        color: #000;
+        font-weight: bold;
+}
+
+.button2-left a:hover,
+.button2-right a:hover {
+        text-decoration: none;
+        color: #0B55C4;
+}
+
+.button2-left a,
+.button2-left span {
+        padding: 0 24px 0 6px;
+}
+
+.button2-right a,
+.button2-right span {
+        padding: 0 6px 0 24px;
+}
+
+.button2-left {
+
+        float: left;
+        margin-left: 5px;
+}
+
+.button2-right {
+
+        float: left;
+        margin-left: 5px;
+}
+
+.button2-left .image {
+
+}
+
+.button2-left .readmore {
+
+}
+
+.button2-left .pagebreak {
+
+}
+
+.button2-left
+{
+
+}
+
+a.modal-button,
+.button2-left .blank a,
+.button2-left a,
+.button2-left div.readmore a
+{background:#eee;
+padding:4px !important;
+margin:0 !important;
+line-height:1.2em; border:solid 1px #ddd;
+font-weight:bold; text-decoration:none;
+margin-top:10px !important
+}
+
+form .media-preview {
+  width: 100%;
+  display: block;
+  .clearfix;  
+  span {
+    float: left;
+  .font-size(12);
+  margin-top: 9px;
+  margin-left: 5px;
+  padding: 2px;
+  border: 1px solid @subatechlightgray;
+}
+}
+

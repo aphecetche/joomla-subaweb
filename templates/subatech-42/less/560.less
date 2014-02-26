@@ -1,0 +1,322 @@
+// 1. ROOT 					==============================
+// 2. TYPOGRAPHY 			==============================
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// 6. LAYOUT 				==============================
+
+@header-top-border-width: 5px;
+@search-width: 170px;
+
+@secondary-nav-width: 160px;
+
+@padding-side-percent: 5%;
+@content-width-percent: 55%;
+
+@nav-secondary-width: 22%;
+
+@expandedcolor: @subatechlightestgray;
+@expandedbackgroundcolor: @subatechdarkestblue;
+
+
+//   BANNER 				==============================
+
+body {
+  border-top: @header-top-border-width solid @subatechbasegreen;
+}
+
+body > header {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+#search {
+margin: 0 15px 0 0;
+padding: 0;
+width: @search-width;
+display: block;
+float: right;
+}
+
+// PRIMARY NAVIGATION 			==============================
+
+.regularnav #nav-primary {
+  ul {
+      display: block;
+      padding: 0;
+      padding-top: @baselinepx+2;
+      border: 0;
+      .clearfix();
+  }
+  li {
+    float: left;
+    display: block;
+    padding-bottom: @baselinepx/3;
+  }
+  width: 100%;
+  margin: 0 auto;
+  /*
+  li:after {
+    content: "\2022";
+    color: @subatechbasegray;
+    .font-size(12);
+  }
+  li:last-child:after {
+    content:"";
+  }
+  */
+ 
+  li ul {
+    display: none;
+  }
+  
+  a {
+    .font-size-with-baseline(18);
+    padding: @baselinepx/2 @padding-side/3;
+    font-family: "OpenSansCondensedLight",Helvetica, sans-serif;
+    letter-spacing: 0.15em;
+  }
+
+  a:hover,a:focus {
+   text-decoration: none;
+   background: transparent;
+   color: @subatechlightgray;
+// put the background in the next size css instead ?
+//   background: url(../images/navbarlinkbg.gif) top left repeat-x;
+  }
+  
+}
+
+#nav-primary-fat-menu {
+  overflow: auto;
+  float: left;
+  width: 100%;
+  background: fade(@expandedbackgroundcolor,0%);
+  background: @expandedbackgroundcolor;
+  color: @expandedcolor;
+  ul {
+    font-family: @baseheadingfont;
+    list-style: none;
+    padding: 0 @padding-side;
+    li {
+      padding-right: 15px;
+      margin: 0 0 @baselinepx/3 0; 
+      a {
+        color: @expandedcolor;
+      }
+      ul {
+        display: none;
+      }
+    }
+  }
+ 
+  a:hover {
+    background: @subatechbaseblue;
+  }
+  
+  .navgroup {
+    color: @expandedcolor;
+    float: left;
+    margin: @baselinepx 0 @baselinepx @padding-side/2;
+    padding: 0;
+    width: 23%;
+    h4 {
+    /*
+      font-family: "OpenSansCondensedBold",Helvetica;  // better on the iPad, but a tad too fat on the desktop
+      font-weight: bold;
+     */
+      .font-size-with-baseline(16);
+      color: @subatechlightestblue; //@expandedcolor;
+      margin: 0 0 @baselinepx/2 0; 
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 0;
+        margin: 0;
+        a {
+          // font-family: "OpenSans", Helvetica; // same remark as above (iPad vs desktop)
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  button {
+    background: transparent;
+    color: @expandedcolor;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .btn_cancel {
+    position: absolute;
+    top: @baselinepx/3;
+    right: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#menu-heading {
+  position: relative;
+  border-bottom: 2px solid @subatechlightblue;
+  margin: @baselinepx/3 @padding-side/2;
+  padding: @baselinepx/3 0;
+  a {
+    .font-size-with-baseline(18);
+    color: @expandedcolor;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+// BANNER IMAGE     ==============================
+
+#bannerimage {
+  border-top: 1px solid @subatechbaseblue;
+}
+
+// BREADCRUMBS NAVIGATION 			==============================
+
+#nav-breadcrumbs {
+  float: right;
+  padding-right: @padding-side;
+  .font-size-with-baseline(12);
+  img {
+    vertical-align: 10%;
+  }
+  background:fade(blue,@debugtransparency);
+}
+
+// WRAPPER for content + secondary nav + complementary ================
+
+#wrapper {
+  background: fade(blue,@debugtransparency);
+
+  float: right;
+  width: 100%;
+
+  margin: 0 auto;
+
+  margin-bottom: @baselinepx*2;
+
+}
+
+// 2nd NAVIGATION =======================
+
+#nav-secondary {
+
+  float: right;
+  
+  background:fade(yellow,@debugtransparency);
+  padding: 0;
+  padding-top: @baselinepx;
+  padding-right: @padding-side-percent/2;
+  margin: 0;
+  margin-right: @padding-side-percent;
+  width: @nav-secondary-width;
+  li {
+    margin: 0; // 0 @baselinepx/4 0;
+    margin-bottom: @baselinepx/4; 
+    border-bottom: 1px dotted @subatechlightergray;
+    ul li {
+      padding-left: @padding-side-percent*2;
+    }
+  }
+  ul {
+  display: block;
+  }
+
+  ul > li > ul > li {
+    border: 0;
+  }
+  
+  li.current.active  {
+    border-bottom: 1px solid @subatechbasegreen;
+  }
+
+  ul > li > ul > li.current.active  {
+    //border-bottom: 1px solid @subatechbasegreen;
+    margin-left: @padding-side-percent*2;
+    padding-left: 0;
+  }
+
+  a {
+    .font-size-with-baseline(14);
+  }
+}
+
+h4.menu.side.title {
+  
+  .font-size-with-baseline(16);
+  text-align: right;
+  //color: @subatechbasegreen;
+  //border-bottom: 1px solid @subatechbasegray;
+  margin-bottom: @baselinepx;
+  //padding-bottom: @baselinepx/4;
+}
+
+//   CONTENT 				==============================
+
+#content {
+  float: right;
+  background:rgba(200,0,0,@debugtransparency);
+  padding: 0 @padding-side-percent;
+  margin-right: @padding-side-percent/2;
+  width: @content-width-percent;
+}
+
+.onecol #content {
+  width: 80%;
+  float: none;
+  margin: 0 auto;
+}
+
+.onecol #breadcrumbsNavigation {
+  margin: 0 auto;
+  width: 80%;
+}
+
+//   COMPLEMENTARY 			==============================
+
+aside {
+  display: none;
+}
+
+//   CONTENTINFO 			==============================
+
+body > footer {
+  width: 100%;
+  clear: both;
+  margin-top: @baselinepx*5;
+  background:@subatechdarkblue;
+  color: @subatechlightestgray;
+  font-family: 'OpenSansCondensedLight', Helvetica, sans-serif;
+  a:link,a:visited {
+    color: @subatechlightestgray;
+    background: transparent;
+  }
+  a:focus,a:hover {
+    color: @subatechbasegreen;
+    background: transparent;
+  }
+  li {
+    float: left;
+    padding: 0 @padding-side;
+    }
+  a.en-flag {
+    display: block;
+    background: url(/media/mod_languages/images/en.gif) no-repeat 0 6px;
+    padding-left: 20px;
+  }
+}
+
+//  7. VENDOR-SPECIFIC 		==============================
+//  8. MODERNIZR 			==============================
+//  9. TEMPLATE SPECIFICS 	===========================

@@ -1,0 +1,37 @@
+@import "mixins.less";
+@import "variables.less";
+
+html {
+  background: @subatechlightergray;
+}
+
+body {
+  font-family : @basefont;
+  background: @bodycolor;
+  background: white;
+  width: 50%;
+  padding: 2em;
+  margin: 10em auto;
+  border: 3px solid @subatechdarkgreen;
+  .rounded(10px);
+}
+
+h2 {
+  color: @subatechbaseblue;
+  margin: 0 auto 1em auto;
+  text-align: center;  
+}
+
+p {
+    color: @subatechbaseblue;
+    .font-size-with-baseline(12,1,1);
+}
+
+a {
+  color: @subatechdarkgray;  
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}

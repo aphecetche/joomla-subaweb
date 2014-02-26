@@ -1,0 +1,89 @@
+@navcolor: @subatechlightestgray;
+@backgroundnavcolor: @subatechbaseblue;
+
+.compactnav header {
+  min-height:2*@baselinepx;
+}
+
+.compactnav nav {
+margin: 0;
+padding: 0;
+ul {
+  display: none;
+}
+
+.btn-navbar {
+  position: absolute;
+  top: @baselinepx - 2;
+  right: 6px;
+  padding: 7px 9px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: @backgroundnavcolor;
+}
+
+ .btn-navbar:hover,
+ .btn-navbar:active,
+ .btn-navbar.active,
+ .btn-navbar.disabled,
+ .btn-navbar[disabled] {
+  background-color: @backgroundnavcolor;
+}
+
+.btn-navbar:active,
+.btn-navbar.active {
+  background-color: @backgroundnavcolor;
+}
+
+.btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: @navcolor;
+}
+
+.icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+}
+
+.compactnav nav#nav-primary.expanded {
+  display: block;
+}
+
+.compactnav nav#nav-primary.expanded ul {
+margin: 0;
+margin-bottom: @baselinepx;
+padding: 0;
+display: block;
+background: @backgroundnavcolor;
+  li {
+    padding: 0;
+    margin: 0;
+    display: block;
+    a {
+      .font-size-with-baseline(24);
+      text-align: center;
+      text-decoration: none;
+      margin: 0;
+      padding: @baselinepx/2 0;
+      display: block;
+      color: @navcolor;
+      border-bottom: 1px solid darken(@navcolor,30%);
+     &:hover {
+      color: darken(@navcolor,30%);
+      background: inherit;
+     }
+    }
+    ul
+    {
+      display: none;
+    }
+  } // end li    
+  li:last-child a {
+    border-bottom: 0;
+  }
+} // end ul
+
+

@@ -1,0 +1,200 @@
+
+/* Typography =================================================== */
+
+// HEADINGS ====================================================
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+margin : 0;
+font-family : @baseheadingfont;
+font-weight : @baseheadingfontweight;
+color : @baseheadingfontcolor;
+text-rendering : optimizelegibility; 
+}
+
+h1 small, 
+h2 small {
+font-weight : normal;
+color : @lightgrey; 
+}
+
+h1,
+.h1 { 
+margin: 0;
+padding: 0;
+.font-size-with-baseline(24,1,1);
+}
+
+h2,
+.h2 { 
+.font-size-with-baseline(21,1,1);
+}
+
+h3,
+.h3 { 
+.font-size-with-baseline(18,1,1);
+}
+
+h4,
+.h4 { 
+.font-size-with-baseline(16,0.5,0.5);
+}
+
+h5,
+.h5 { 
+.font-size-with-baseline(14,0.5,0.5);
+}
+
+h6,
+.h6 { 
+.font-size-with-baseline(14,0.5,0.5);
+font-weight : normal;
+letter-spacing : 1px;
+text-transform : uppercase; }
+
+// header
+
+header h1 {
+  color: @subatechdarkblue;
+  .font-size-with-baseline(12);
+}
+
+header .a-rss,
+header .a-rss:hover {
+float : left; 
+width : 16px;
+height : 16px;
+padding : 0;
+background : transparent url(../img/a-rss.png) no-repeat 0 0;
+.hide-text; }
+
+// TYPOGRAPHY ====================================================
+
+#content p:first-of-type {
+  margin-top: @baselinepx;
+}
+
+p, 
+ol, 
+ul, 
+dl { 
+.font-size-with-baseline(@basefontsize);
+}
+
+p+p {
+margin-top: @baselinepx;
+//text-indent: 2em;
+}
+
+small,address { 
+.font-size-with-baseline(@basefontsize*0.75); }
+
+ul, 
+ol {
+margin: 0;
+padding: 0; 
+margin-left: -@gutterwidth;
+padding-left: @gutterwidth;
+}
+
+li ul, 
+li ol { 
+margin : 0;
+.font-size-with-baseline(14); }
+
+
+// blockquote
+
+blockquote  { 
+margin : 0 0 (@baseline/@basefontsize)e -@gutterwidth; 
+padding-left : @gutterwidth; 
+border-left : 2px solid @bordercolor;
+font-family : @altfont;
+font-style : normal; }
+
+q { 
+quotes : none; }
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+content : '';
+content : none; }
+
+cite {
+font-style : normal; } 
+
+// definition lists
+
+dl, 
+dd { 
+margin-bottom : (@baseline/@basefontsize)em;  }
+
+dt { 
+font-weight : bold; }
+
+.dl-horizontal {
+
+dt {
+float : left;
+clear : left;
+width : 20.25%;
+text-align : right; }
+
+dd {
+margin-left : 22.78%; } 
+}
+
+// text-level
+
+abbr[title] { 
+border-bottom : 1px dotted @bordercolor; 
+cursor : help; }
+
+b, strong { 
+font-weight : bold; }
+
+dfn { 
+font-style : italic; }
+
+ins { 
+background-color : lighten(@basecolor, 75%); 
+color : @textcolor; 
+text-decoration : none; }
+
+mark { 
+background-color : lighten(@basecolor, 75%); 
+color : @textcolor; 
+font-style : italic; 
+font-weight : bold; }
+
+pre, 
+code, 
+kbd, 
+samp { 
+font-family : @codefont;
+.font-size-with-baseline(14);
+}
+
+pre { 
+white-space : pre; 
+white-space : pre-wrap; 
+word-wrap : break-word; }
+
+sub, 
+sup { 
+position : relative;
+.font-size(12);
+line-height : 0; 
+vertical-align : (@baseline/@basefontsize)em; }
+
+sup { 
+top : -.5em; }
+
+sub { 
+bottom : -.25em; }

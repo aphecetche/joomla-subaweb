@@ -1,0 +1,111 @@
+body {
+  margin: 1em 2em;
+}
+
+.internship.list
+{
+  .font-size-with-printbaseline(16);
+}
+ 
+#internship {
+  .font-size-with-printbaseline(8,12);
+}
+
+.internship.list .item
+{
+    width: 100%;
+    float: left;
+    clear: both;
+    padding: 0.5em;
+    border-bottom: 1px solid #DDD;
+}
+
+#internship p {
+      text-align: justify;
+      .font-size-with-printbaseline(8,12);
+      margin-top: 1em;
+}
+
+
+#internship-logos img.left {
+  float: left;  
+}
+#internship-logos img.middle {
+  float: right;  
+}
+
+#internship-logos img.right {
+  float: right;  
+}
+
+header#internship-logos {
+  .clearfix;  
+}
+
+#internship h1 {
+  text-align: center;
+  text-transform : uppercase;
+  font-weight: bold;
+  .font-size-with-printbaseline(10);
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+#internship h2 {
+  font-weight: bold;
+  .font-size-with-printbaseline(9);
+
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  border-top: 1px solid @subatechdarkgray;
+  &:before {
+    font-weight: bold;
+    content: "Titre: ";
+  }
+}
+
+.registered .internship.list .description
+{
+  width: 85%;
+  float: left;
+}
+
+dl#host {
+  width: 100%;
+  float: left;
+  margin-bottom: @baselinepx;  
+}
+
+#host dt {
+  float: left;
+  clear: left;
+  font-weight: bold;
+}
+
+#host dt:after {
+  content : " :";
+}
+
+#host dd {
+  float: left;
+  clear: right;
+  padding-left: 0.5em;
+}
+
+#internship p.keywords {
+  width: 100%;
+  &:before {
+    font-weight: bold;
+    content:"Mots clés : ";
+  }
+  .font-size-with-printbaseline(8);
+  float: left;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  border-top: 1px solid @subatechlightgray;
+}
+
+#internship a {
+  color: black;
+  text-decoration: none;
+}
