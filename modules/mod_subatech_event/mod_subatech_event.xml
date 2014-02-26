@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.3" client="site" method="install">
+<name>Subatech Event Display</name>
+<author>Laurent Aphecetche</author>
+<creationDate>September 2013</creationDate>
+<copyright>Copyright Laurent Aphecetche (c) 2013</copyright>
+<license>GNU General Public License version 2 or later</license>
+<authorEmail>laurent.aphecetche@subatech.in2p3.fr</authorEmail>
+<authorUrl>cern.ch/laurent.aphecetche</authorUrl>
+<version>1.0</version>
+<description>MOD_SUBATECH_EVENT_XML_DESCRIPTION</description>
+<files>
+<filename module="mod_subatech_event">mod_subatech_event.php</filename>
+<filename>index.html</filename>
+<filename>mod_subatech_event.xml</filename>
+<filename>helper.php</filename>
+<folder>tmpl</folder>
+</files>
+ <languages>
+                <language tag="en-GB">en-GB.mod_subatech_event.ini</language>
+                <language tag="en-GB">en-GB.mod_subatech_event.sys.ini</language>
+                <language tag="fr-FR">fr-FR.mod_subatech_event.ini</language>
+                <language tag="fr-FR">fr-FR.mod_subatech_event.sys.ini</language>
+</languages>
+</extension>
