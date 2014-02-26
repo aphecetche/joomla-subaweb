@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SUBATECH_FEATURED_VIEW_DEFAULT_TITLE">
+		<message><![CDATA[COM_SUBATECH_FEATURED_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+		<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_content/models/fields">
+
+			<field name="id" type="modal_article"
+				label="COM_SUBATECH_FIELD_SELECT_ARTICLE_LABEL"
+				required="true"
+				description="COM_SUBATECH_FIELD_SELECT_ARTICLE_DESC"
+			/>
+		</fieldset>		
+		</fields>
+		<fields name="params">
+		<fieldset name="basic">
+			<field name="seminars-pastdays"
+				type="text" 
+				default="60"
+				size="8"
+				label="COM_SUBATECH_FEATURED_VIEW_SEMINARS_PASTDAYS_LABEL"
+				description="COM_SUBATECH_FEATURED_SEMINARS_PASTDAYS_DESC"
+				filter="integer" />
+            <field name="seminars-futuredays"
+                type="text" 
+                default="60"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_SEMINARS_FUTUREDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_SEMINARS_FUTUREDAYS_DESC"
+                filter="integer" />
+            <field name="events-pastdays"
+                type="text" 
+                default="180"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_EVENTS_PASTDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_EVENTS_PASTDAYS_DESC"
+                filter="integer" />
+            <field name="events-futuredays"
+                type="text" 
+                default="180"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_EVENTS_FUTUREDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_EVENTS_FUTUREDAYS_DESC"
+                filter="integer" />
+            <field name="jobs-pastdays"
+                type="text" 
+                default="15"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_JOBS_PASTDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_JOBS_PASTDAYS_DESC"
+                filter="integer" />
+            <field name="jobs-futuredays"
+                type="text" 
+                default="180"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_JOBS_FUTUREDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_JOBS_FUTUREDAYS_DESC"
+                filter="integer" />
+            <field name="internships-pastdays"
+                type="text" 
+                default="30"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_INTERNSHIPS_PASTDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_INTERNSHIPS_PASTDAYS_DESC"
+                filter="integer" />
+            <field name="internships-futuredays"
+                type="text" 
+                default="180"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_INTERNSHIPS_FUTUREDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_INTERNSHIPS_FUTUREDAYS_DESC"
+                filter="integer" />
+            <field name="phds-pastdays"
+                type="text" 
+                default="8"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_PHDS_PASTDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_PHDS_PASTDAYS_DESC"
+                filter="integer" />
+            <field name="phds-futuredays"
+                type="text" 
+                default="180"
+                size="8"
+                label="COM_SUBATECH_FEATURED_VIEW_PHDS_FUTUREDAYS_LABEL"
+                description="COM_SUBATECH_FEATURED_PHDS_FUTUREDAYS_DESC"
+                filter="integer" />
+			<field name="show-seminars"
+			    type="radio"
+			    default="1"
+			    label="COM_SUBATECH_FEATURED_SHOW_SEMINARS_LABEL"  >
+			     <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+			  </field>
+            <field name="show-events"
+                type="radio"
+                default="1"
+                label="COM_SUBATECH_FEATURED_SHOW_EVENTS_LABEL" >
+                 <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+              </field>
+            <field name="show-jobs"
+                type="radio"
+                default="1"
+                label="COM_SUBATECH_FEATURED_SHOW_JOBS_LABEL" >
+                 <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+              </field>
+            <field name="show-internships"
+                type="radio"
+                default="0"
+                label="COM_SUBATECH_FEATURED_SHOW_INTERNSHIPS_LABEL" >
+                                 <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+              </field>
+            <field name="show-phds"
+                type="radio"
+                default="1"
+                label="COM_SUBATECH_FEATURED_SHOW_PHDS_LABEL" >
+                                 <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+              </field>
+			    
+		</fieldset>
+	</fields>
+</metadata>

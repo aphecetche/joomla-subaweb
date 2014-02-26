@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset name="internship">
+	<field name="id"
+		type="hidden"
+		label="JGLOBAL_FIELD_ID_LABEL"
+		description="JGLOBAL_FIELD_IED_DESC"
+		size="10"
+		default="0"
+		readonly="true"
+		class="readonly"
+	/>
+	
+	<field name="logo1" type="media" directory="Enseignement" default="" label="COM_SUBATECH_JOB_LOGO1OVER3_LABEL" />
+    <field name="logo2" type="media" directory="Enseignement" label="COM_SUBATECH_JOB_LOGO2OVER3_LABEL" />
+    <field name="logo3" type="media" directory="Enseignement" label="COM_SUBATECH_JOB_LOGO3OVER3_LABEL" />
+    
+    <field name="school_year" type="text" maxlength="9" label="COM_SUBATECH_JOB_SCHOOL_YEAR_LABEL" />
+    
+    <field
+            id="date_start"
+            name="date_start"
+            type="calendar"
+            label="JGLOBAL_FIELD_DATE_START_LABEL"
+            description="JGLOBAL_FIELD_DATE_START_DESC"
+            class="inputbox"
+            format="%Y-%m-%d %H:%M:%S"
+            size="22"
+            filter="user_utc" />
+
+	<field name="title"
+		type="text"
+		label="COM_SUBATECH_INTERNSHIP_TITLE_LABEL"
+		description="COM_SUBATECH_INTERNSHIP_TITLE_DESC"
+		class="inputbox"
+		size="60"
+		required="true"
+	/>
+	<field name="alias"
+		type="text"
+		label="JFIELD_ALIAS_LABEL"
+		description="JFIELD_ALIAS_DESC"
+		class="inputbox"
+		size="30"
+	/>
+	
+	<field name="type"
+        type="radio"
+        label="COM_SUBATECH_JOB_TYPE_LABEL"
+        description="COM_SUBATECH_JOB_TYPE_DESC"
+        class="inputbox"
+        size="1"
+        default="spécialisé"
+    >
+        <option value="license1">
+            COM_SUBATECH_JOB_TYPE_LICENSE1</option>
+        <option value="license2">
+            COM_SUBATECH_JOB_TYPE_LICENSE2</option>
+        <option value="license3">
+            COM_SUBATECH_JOB_TYPE_LICENSE3</option>
+        <option value="master1">
+            COM_SUBATECH_JOB_TYPE_MASTER1</option>
+        <option value="master2">
+            COM_SUBATECH_JOB_TYPE_MASTER2</option>        
+    </field>
+    
+	<field name="description"
+		type="editor"
+		class="inputbox"
+		label="COM_SUBATECH_JOB_DESCRIPTION_LABEL"
+		description="COM_SUBATECH_JOB_DESCRIPTION_DESC"
+		filter="JComponentHelper::filterText"
+		buttons="false"
+		required="true"
+	/>
+	
+	
+</fieldset>
+
+<fieldset name="host">
+
+    <field name="internal_offer"
+        type="checkbox"
+        label="COM_SUBATECH_JOB_INTERNAL_OFFER_LABEL"
+        description="COM_SUBATECH_JOB_INTERNAL_OFFER_DESC"
+        class="inputbox"
+        value="1"
+        default="1"
+     />
+
+    <field name="enterprise_offer"
+        type="checkbox"
+        label="COM_SUBATECH_JOB_ENTERPRISE_OFFER_LABEL"
+        description="COM_SUBATECH_JOB_ENTERPRISE_OFFER_DESC"
+        class="inputbox"
+        value="1"
+        default="0"
+     />
+     
+    <field name="host_laboratory_name"
+        type="text"
+        label="COM_SUBATECH_JOB_HOST_LABORATORY_NAME_LABEL"
+        description="COM_SUBATECH_JOB_HOST_LABORATORY_NAME_DESC"
+        class="inputbox"
+        size="60"
+    />
+
+    <field name="host_laboratory_address"
+        type="text"
+        label="COM_SUBATECH_JOB_HOST_LABORATORY_ADDRESS_LABEL"
+        description="COM_SUBATECH_JOB_HOST_LABORATORY_ADDRESS_DESC"
+        class="inputbox"
+        size="120"
+    />
+
+    <field name="contact_name"
+        type="text"
+        label="COM_SUBATECH_JOB_CONTACT_NAME_LABEL"
+        description="COM_SUBATECH_JOB_CONTACT_NAME_DESC"
+        class="inputbox"
+        size="60"
+        required="true"
+    />
+    <field name="contact_phone"
+        type="text"
+        label="COM_SUBATECH_JOB_CONTACT_PHONE_LABEL"
+        description="COM_SUBATECH_JOB_CONTACT_PHONE_DESC"
+        class="inputbox"
+        size="60"
+        required="true"
+    />
+    <field name="contact_email"
+        type="text"
+        label="COM_SUBATECH_JOB_CONTACT_EMAIL_LABEL"
+        description="COM_SUBATECH_JOB_CONTACT_EMAIL_DESC"
+        class="inputbox"
+        size="60"
+        required="true"
+    />
+    
+</fieldset>
+    
+<fieldset name="extra">
+
+	<field name="keywords"
+		type="text"
+		label="COM_SUBATECH_JOB_KEYWORDS_LABEL"
+		description="COM_SUBATECH_JOB_KEYWORDS_DESC"
+		class="inputbox"
+		size="60"
+	/>
+    <field name="needed_skills"
+        type="text"
+        label="COM_SUBATECH_JOB_NEEDED_SKILLS_LABEL"
+        description="COM_SUBATECH_JOB_NEEDED_SKILLS_DESC"
+        class="inputbox"
+    />
+    <field name="misc"
+        type="editor"
+        label="COM_SUBATECH_JOB_MISC_LABEL"
+        description="COM_SUBATECH_JOB_MISC_DESC"
+        class="inputbox"
+        filter="JComponentHelper::filterText"
+        buttons="true" 
+    />
+        	
+</fieldset>
+
+<fieldset name="state">
+	<field
+			id="state"
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">
+				JPUBLISHED</option>
+			<option
+				value="0">
+				JUNPUBLISHED</option>
+			<option
+				value="2">
+				JARCHIVED</option>
+			<option
+				value="-2">
+				JTRASHED</option>
+		</field>
+		
+		      <field name="created" type="calendar" label="JGLOBAL_FIELD_CREATED_LABEL"
+            description="JGLOBAL_FIELD_CREATED_DESC" class="inputbox" size="22"
+            format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+
+			<field
+			id="publish_up"
+			name="publish_up"
+			type="calendar"
+			label="JGLOBAL_FIELD_PUBLISH_UP_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_UP_DESC"
+			class="inputbox"
+			format="%Y-%m-%d %H:%M:%S"
+			size="22"
+			filter="user_utc" />
+
+		<field
+			id="publish_down"
+			name="publish_down"
+			type="calendar"
+			label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC"
+			class="inputbox"
+			format="%Y-%m-%d %H:%M:%S"
+			size="22"
+			filter="user_utc" />
+
+</fieldset>
+
+<field name="internship"
+    type="hidden"
+    default="1">
+    </field>
+    
+</form>

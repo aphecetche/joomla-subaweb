@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+ 
+	<name>com_subatech</name>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>February 2013</creationDate>
+	<author>Laurent Aphecetche</author>
+	<authorEmail>laurent@aphecetche.fr</authorEmail>
+	<authorUrl>laurent.aphecetche.fr</authorUrl>
+	<copyright>(c) 2012 Laurent Aphecetche</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.7</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>COM_SUBATECH_DESCRIPTION</description>
+ 
+    <install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update> <!-- Runs on update; New in 1.7 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<media destination="com_subatech" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+	 
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>subatech.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+		<folder>helpers</folder>
+		<folder>controllers</folder>
+	</files>
+ 
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="../media/com_subatech/images/favicon.png">Subatech</menu>
+			<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			<menu link="option=com_subatech" view="seminars">com_subatech_seminars</menu>
+			<menu link="option=com_subatech&amp;view=events" view="events">com_subatech_events</menu>
+            <menu link="option=com_subatech&amp;view=jobs" view="jobs">com_subatech_jobs</menu>
+            <menu link="option=com_subatech&amp;view=internships" view="internships">com_subatech_internships</menu>
+		</submenu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>			
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<filename>index.html</filename>
+			<folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<filename>subatech.php</filename>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+
+</extension>

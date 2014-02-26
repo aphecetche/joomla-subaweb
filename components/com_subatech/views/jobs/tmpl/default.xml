@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SUBATECH_JOBS_VIEW_DEFAULT_TITLE">
+		<message><![CDATA[COM_SUBATECH_JOBS_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="year"
+				type="text" 
+				default="2013"
+				size="9"
+				label="COM_SUBATECH_JOBS_VIEW_YEAR"
+				description="COM_SUBATECH_JOBS_VIEW_YEAR_DESC"
+				maxlength="9"
+			 />
+            <field name="jobtype"
+                type="text" 
+                default=""
+                label="COM_SUBATECH_JOBS_VIEW_JOBTYPE"
+                description="COM_SUBATECH_JOBS_VIEW_JOBTYPE_DESC"
+             />
+		</fieldset>
+	</fields>
+</metadata>

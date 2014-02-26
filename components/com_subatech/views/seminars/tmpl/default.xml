@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SUBATECH_SEMINARS_VIEW_DEFAULT_TITLE">
+		<message><![CDATA[COM_SUBATECH_SEMINARS_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="year"
+				type="text" 
+				default="0"
+				size="8"
+				label="COM_SUBATECH_SEMINARS_VIEW_YEAR"
+				description="COM_SUBATECH_SEMINARS_VIEW_YEAR_DESC"
+				filter="integer" />
+			<field name="show_location"
+                type="radio" 
+                default="1"
+                label="COM_SUBATECH_SEMINARS_VIEW_SHOW_LOCATION"
+                description="COM_SUBATECH_SEMINARS_VIEW_SHOW_LOCATION_DESC"
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+                 />
+		</fieldset>
+	</fields>
+</metadata>

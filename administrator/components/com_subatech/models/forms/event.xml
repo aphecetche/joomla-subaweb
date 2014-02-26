@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fieldset name="event">
+	<field name="id"
+		type="hidden"
+		label="JGLOBAL_FIELD_ID_LABEL"
+		description="JGLOBAL_FIELD_IED_DESC"
+		size="10"
+		default="0"
+		readonly="true"
+		class="readonly"
+	/>
+	<field name="title"
+		type="text"
+		label="COM_SUBATECH_EVENT_TITLE_LABEL"
+		description="COM_SUBATECH_EVENT_TITLE_DESC"
+		class="inputbox"
+		size="30"
+		required="true"
+	/>
+	<field name="alias"
+		type="text"
+		label="JFIELD_ALIAS_LABEL"
+		description="JFIELD_ALIAS_DESC"
+		class="inputbox"
+		size="30"
+	/>
+		<field
+			id="state"
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">
+				JPUBLISHED</option>
+			<option
+				value="0">
+				JUNPUBLISHED</option>
+			<option
+				value="2">
+				JARCHIVED</option>
+			<option
+				value="-2">
+				JTRASHED</option>
+		</field>
+
+	<field name="pre_summary"
+		type="editor"
+		class="inputbox"
+		label="COM_SUBATECH_EVENT_PRE_SUMMARY_LABEL"
+		description="COM_SUBATECH_EVENT_PRE_SUMMARY_DESC"
+		filter="JComponentHelper::filterText"
+		buttons="false" />
+
+	<field name="url_more_info"
+		type="text"
+		class="inputbox"
+		label="COM_SUBATECH_EVENT_URL_MORE_INFO_LABEL"
+		description="COM_SUBATECH_EVENT_URL_MORE_INFO_DESC"
+		size="100"
+		/>
+
+	<field name="post_summary"
+		type="editor"
+		class="inputbox"
+		label="COM_SUBATECH_EVENT_POST_SUMMARY_LABEL"
+		description="COM_SUBATECH_EVENT_POST_SUMMARY_DESC"
+		filter="JComponentHelper::filterText"
+		buttons="false" />
+
+</fieldset>
+
+<fieldset name="venue">
+	<field name="location"
+		type="text"
+		label="COM_SUBATECH_EVENT_LOCATION_LABEL"
+		description="COM_SUBATECH_EVENT_LOCATION_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+	<field name="date_start"
+		type="calendar"
+		label="COM_SUBATECH_EVENT_DATE_START_LABEL"
+		description="COM_SUBATECH_EVENT_DATE_START_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+		<field name="date_end"
+		type="calendar"
+		label="COM_SUBATECH_EVENT_DATE_END_LABEL"
+		description="COM_SUBATECH_EVENT_DATE_END_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+</fieldset>
+
+</form>

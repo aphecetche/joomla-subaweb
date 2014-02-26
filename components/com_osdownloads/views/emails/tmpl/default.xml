@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_OSDOWNLOADS_EMAILS_VIEW_DEFAULT_TITLE">
+        <message>
+            <![CDATA[]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="basic" label="OSDOWNLOADS_OPTIONS">
+            <field name="category_id" type="category"
+                extension="com_osdownloads"
+                label="OSDOWNLOAD_CATEGORIES"
+            />                 
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SUBATECH_INTERNSHIPS_VIEW_DEFAULT_TITLE">
+		<message><![CDATA[COM_SUBATECH_INTERNSHIPS_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="schoolyear"
+				type="text" 
+				default="2012-2013" 
+				size="9"
+				label="COM_SUBATECH_INTERNSHIPS_VIEW_SCHOOLYEAR"
+				description="COM_SUBATECH_INTERNSHIPS_VIEW_SCHOOLYEAR_DESC"
+				maxlength="9"
+				required="false"
+			 />
+            <field name="grade"
+                type="text" 
+                default="master2"
+                label="COM_SUBATECH_INTERNSHIPS_VIEW_TYPE"
+                description="COM_SUBATECH_INTERNSHIPS_VIEW_TYPE_DESC"
+                />
+		</fieldset>
+	</fields>
+</metadata>

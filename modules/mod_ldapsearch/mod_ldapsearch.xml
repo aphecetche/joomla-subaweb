@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.3" client="site" method="install">
+<name>LDAP Search</name>
+<author>Laurent Aphecetche</author>
+<creationDate>January 2012</creationDate>
+<copyright>Copyright Laurent Aphecetche (c) 2012</copyright>
+<license>GNU General Public License version 2 or later</license>
+<authorEmail>laurent.aphecetche@subatech.in2p3.fr</authorEmail>
+<authorUrl>cern.ch/laurent.aphecetche</authorUrl>
+<version>1.0</version>
+<description>MOD_LDAPSEARCH_XML_DESCRIPTION</description>
+<files>
+<filename module="mod_ldapsearch">mod_ldapsearch.php</filename>
+<filename>index.html</filename>
+<filename>mod_ldapsearch.xml</filename>
+<filename>helper.php</filename>
+<folder>tmpl</folder>
+</files>
+ <languages>
+                <language tag="en-GB">en-GB.mod_ldapsearch.ini</language>
+                <language tag="en-GB">en-GB.mod_ldapsearch.sys.ini</language>
+                <language tag="fr-FR">fr-FR.mod_ldapsearch.ini</language>
+                <language tag="fr-FR">fr-FR.mod_ldapsearch.sys.ini</language>
+</languages>
+<config>
+<fields name="params">
+	<fieldset name="basic">
+		<field name="group"
+			type="text"
+			default=""
+			label="MOD_LDAPSEARCH_FIELD_GROUP_LABEL"
+			description="MOD_LDAPSEARCH_FIELD_GROUP_DESC" />
+		<field name="extrafilter"
+			type="text"
+			default=""
+			label="MOD_LDAPSEARCH_FIELD_EXTRAFILTER_LABEL"
+			description="MOD_LDAPSEARCH_FIELD_EXTRAFILTER_DESC" />
+		<field name="layout"
+			type="list"
+			default="default"
+			label="MOD_LDAPSEARCH_FIELD_LAYOUT_LABEL"
+			description="MOD_LDAPSEARCH_FIELD_LAYOUT_DESC">
+			<option
+				value="default">MOD_LDAPSEARCH_FIELD_VALUE_DEFAULT</option>
+			<option
+				value="table">MOD_LDAPSEARCH_FIELD_VALUE_TABLE</option>
+			<option
+				value="single">MOD_LDAPSEARCH_FIELD_VALUE_SINGLE</option>
+		</field>
+	</fieldset>
+</fields>
+</config>
+</extension>
