@@ -21,7 +21,16 @@ JHtml::_('behavior.multiselect');
 	<th><?php echo JText::_('JGRID_HEADING_ID') ?></th>
 </tr>
 </thead>
+<tfoot>
+            <tr>
+                <td colspan="5">
+                   <?php echo $this->pagination->getListFooter(); ?>
+                </td>
+            </tr>
+        </tfoot>
+        
 <tbody>
+
 <?php foreach ($this->items as $i => $item): 
   $canCheckin = $user->authorise('core.manage','com_checkin') || $item->checked_out == $userId || $item->checked_out == 0;
   $canChange = $user->authorise('core.edit.state', 'com_subatech') && $canCheckin;
@@ -52,8 +61,12 @@ JHtml::_('behavior.multiselect');
 </td>
 
 <?php endforeach; ?>
+
+
 </tbody>
+
 </table>
+
 
 <div>
 <input type="hidden" name="task" value="" />

@@ -1,18 +1,24 @@
 <?php
 defined('_JEXEC') or die;
 
-jimport('joomla.application.component.view');
-
-class SubatechViewSeminars extends JView
+class SubatechViewSeminars extends JViewLegacy
 {
   protected $items;
   protected $pagination;
+  protected $state;
   
   public function display($tpl = null)
   {
+    $this->state     = $this->get('State'); // !! state must be set before going to get items otherwise pagination is not working !
   	$this->items = $this->get('Items');
   	$this->pagination = $this->get('Pagination');
-  	
+    
+    // Check for errors.
+        if (count($errors = $this->get('Errors'))) {
+            JError::raiseError(500, implode("\n", $errors));
+            return false;
+        }
+        
   	$this->addToolbar();
   	
   	parent::display($tpl);
@@ -21,6 +27,7 @@ class SubatechViewSeminars extends JView
   public function addToolbar()
   {
     $canDo = SubatechHelper::getActions();
+    $state  = $this->get('State');
     
   	JToolBarHelper::title(JText::_('COM_SUBATECH_SEMINARS_LIST_TITLE'),'subatech');
   	
@@ -47,10 +54,15 @@ class SubatechViewSeminars extends JView
 		JToolBarHelper::divider();
 		JToolBarHelper::checkin('seminars.checkin');
 	 	JToolBarHelper::archiveList('seminars.archive');
- 		JToolBarHelper::trash('seminars.trash');
-		JToolBarHelper::divider();
 	}
-	
+    
+	if ($state->get('filter.state') == -2 && $canDo->get('core.delete')) {
+            JToolBarHelper::deleteList('', 'seminars.delete', 'JTOOLBAR_EMPTY_TRASH');
+            JToolBarHelper::divider();
+        } elseif ($canDo->get('core.edit.state')) {
+            JToolBarHelper::trash('seminars.trash');
+            JToolBarHelper::divider();
+        }
  	if ($canDo->get('core.admin'))
  	{
  		JToolBarHelper::preferences('com_subatech');
