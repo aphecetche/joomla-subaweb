@@ -3,6 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 $document = JFactory::getDocument();
+$languages = JLanguageHelper::getLanguages('lang_code');
 
 ?>
 
@@ -21,7 +22,10 @@ $document = JFactory::getDocument();
 </thead>
 
 <?php foreach ($this->items as $item): ?>
-<?php $url = 'index.php?option=com_content&view=article&id=' . $item[0]; ?>
+<?php 
+$sef = $languages[$item[4]]->sef;
+$url = 'index.php?option=com_content&view=article&id=' . $item[0] . '&lang=' . $sef; 
+?>
 
 <tr>
 <td class="authorized_article_title"><a href="<?php echo JRoute::_($url); ?>">
@@ -33,6 +37,11 @@ $document = JFactory::getDocument();
 <td class="authorized_date_modified">
 <?php echo $this->escape($item[3]) ?>
 </td>
+
+<td>
+<?php echo $this->escape($item[4]) ?>
+</td>
+
 </tr>
 
 <?php endforeach ?>

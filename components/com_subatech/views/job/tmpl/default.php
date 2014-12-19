@@ -28,8 +28,10 @@ if  ($type==="thèse")
         "radiochimie" => JText::_('COM_SUBATECH_GROUPS_RADIOCHEMISTRY'),
         "theorie-haute-energie" => JText::_('COM_SUBATECH_GROUPS_THEORIE_HE'),
         "theorie-basse-energie" => JText::_('COM_SUBATECH_GROUPS_THEORIE_BE'),
+        "theorie" => JText::_('COM_SUBATECH_GROUPS_THEORIE'),
         "high-energy-theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE_HE'),
-        "low-energy-theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE_BE')
+        "low-energy-theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE_BE'),
+        "theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE')
     );
     
 ?>

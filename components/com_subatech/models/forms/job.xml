@@ -116,6 +116,7 @@
          <option value="radiochimie">COM_SUBATECH_GROUPS_RADIOCHEMISTRY</option>
          <option value="theorie-basse-energie">COM_SUBATECH_GROUPS_THEORIE_BE</option>         
          <option value="theorie-haute-energie">COM_SUBATECH_GROUPS_THEORIE_HE</option>         
+         <option value="theorie">COM_SUBATECH_GROUPS_THEORIE</option>         
    </field>
        
 	<field name="keywords"

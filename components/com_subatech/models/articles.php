@@ -14,7 +14,7 @@ class SubatechModelArticles extends JModel
 
 		$query = $db->getQuery(true);
 		$query->select('a.id,a.title,c.title,'.
-		'CASE WHEN a.modified = 0 THEN a.created ELSE a.modified END as modified');
+		'CASE WHEN a.modified = 0 THEN a.created ELSE a.modified END as modified, a.language');
 		$query->from('#__content AS a');
 		$query->where('a.catid in (' . implode(',',$user->getAuthorisedCategories('com_content','core.edit')) . ')');
 		$query->join('', '#__categories AS c ON c.id = a.catid');

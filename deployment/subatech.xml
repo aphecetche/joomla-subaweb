@@ -7,10 +7,10 @@
 	<author>Laurent Aphecetche</author>
 	<authorEmail>laurent@aphecetche.fr</authorEmail>
 	<authorUrl>laurent.aphecetche.fr</authorUrl>
-	<copyright>(c) 2012-2013 Laurent Aphecetche</copyright>
+	<copyright>(c) 2012-2014 Laurent Aphecetche</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>1.8</version>
+	<version>1.9</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>COM_SUBATECH_DESCRIPTION</description>
  

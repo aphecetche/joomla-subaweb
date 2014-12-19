@@ -7,7 +7,7 @@ class SubatechModelSeminars extends JModelList
 {
 	public function __construct($config = array())
 	{
-/*
+
 if (empty($config['filter_fields'])) {
 			$config['filter_fields'] = array(
 				'id', 'a.id',
@@ -28,7 +28,7 @@ if (empty($config['filter_fields'])) {
 				'publish_down', 'a.publish_down',
 			);
 		}
-*/
+
 		parent::__construct($config);
   }
   
