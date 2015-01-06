@@ -2,14 +2,24 @@
 export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
 export COPYFILE_DISABLE=true
 
-dest="$HOME/Sites/joomla-dev/packages/subatech.tar.gz"
+component="subatech"
+
+version=$(grep "<version>" $component.xml)
+
+# version should be something like    <version>X.Y</version> at this stage
+
+version=${version//[[:space:]]/} # remove spaces
+
+version=${version/<version>/} # remove <version>
+version=${version/<\/version>/} # remove </version>
+
+dest="$HOME/Sites/joomla-dev/packages/component-subatech-$version.tar.gz"
+
 src="$HOME/Sites/joomla-dev/importlabo/mamp.subatech.in2p3.fr"
 
 rm -f $dest
 
 a=`pwd`
-
-component="subatech"
 
 dir=$a/com_$component
 
