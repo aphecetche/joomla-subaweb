@@ -19,7 +19,7 @@ class SubatechModelFeatured extends JModelList
     {
         $past = JFactory::getApplication()->getParams()->get($what. '-pastdays');
         $future = JFactory::getApplication()->getParams()->get($what . '-futuredays');  
-        
+                
         $datecondition = sprintf("( datediff(%s,now()) >= 0 and datediff(%s,now()) < %d) or ( datediff(%s,now()) < 0 and abs(datediff(%s,now())) < %d)",
         $dateName,$dateName,$future,$dateName,$dateName,$past);     
 
@@ -34,10 +34,10 @@ class SubatechModelFeatured extends JModelList
 
         $query = $db -> getQuery(true);
         
-        $query -> select('id, author, date, location, summary, title, type');
-        $query -> from('#__seminars') 
-        -> where('state=1')
-        -> where($datecondition);
+        $query -> select('id, author, date, location, summary, title, type, state');
+        $query -> from('#__seminars');
+        $query -> where($datecondition);
+        $query -> where($db->quoteName('state') . "=" . $db->quote(1));
         
         $db -> setQuery($query);
 
@@ -63,7 +63,7 @@ class SubatechModelFeatured extends JModelList
         
         $query = $db -> getQuery(true);
              
-        $query -> select('id, title, date_start as date, date_end, pre_summary, post_summary, location, datediff(date_start,now()) as deltadate');
+        $query -> select('id, title, date_start as date, date_end, pre_summary, post_summary, location, datediff(date_start,now()) as deltadate, state');
         $query -> from('#__events') 
         -> where("state=1")
         -> where($datecondition);
