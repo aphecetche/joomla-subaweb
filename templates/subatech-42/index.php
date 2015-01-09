@@ -3,6 +3,10 @@
   // No direct access.
   defined('_JEXEC') or die('Restricted access');;
   
+  jimport('joomla.filesystem.folder');
+  
+  JHtml::_('behavior.framework', true);
+  
   function getBannerImageName() 
   {
     $db =& JFactory::getDBO();
@@ -22,7 +26,9 @@
     }
     
     return 'images/bandeaux/plasma/001.jpg';
+    //return 'images/je-suis-charlie.jpg';
   }
+  
   
   // Get the user group into $body variable
   $body = '';
@@ -54,6 +60,7 @@
   
       // get the headdata
     $headerstuff = $this->getHeadData();
+
     
     $escriptsrc = array_merge($escriptsrc,$headerstuff['scripts']); // retrieve the existing js files
   
@@ -76,6 +83,7 @@
     }   
 
     $escriptsrc["$this->baseurl/templates/subatech-42/js/selectivizr-min.js"] = array( 'mime' => 'text/javascript', 'iecondition' => 'lt IE 9' );
+
 
 
   function generateHead($doc,&$a)
@@ -338,6 +346,7 @@ document.createElement('hgroup');
 <link href="<?php echo $this->baseurl ?>/templates/subatech-42/css/ie.css" rel="stylesheet" type="text/css" >
 <![endif]-->
 
+       <script src="<?php echo $this->baseurl ?>/templates/subatech-42/js/zslimbox.js" type="text/javascript" mime="text/javascript"></script>
        
 </head>
 
@@ -424,6 +433,9 @@ document.createElement('hgroup');
 <div id="endnote">
 <jdoc:include type="modules" name="endnote" />
 </div>
+
+<h3>hello there</h3>
+
 
 </body>
 </html>

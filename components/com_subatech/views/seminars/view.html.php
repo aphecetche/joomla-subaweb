@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HTML View class for the HelloWorld Component
  */
-class SubatechViewSeminars extends JView
+class SubatechViewSeminars extends JViewLegacy
 {
 	protected $items;
 	protected $params;

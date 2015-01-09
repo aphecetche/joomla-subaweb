@@ -4,7 +4,7 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.model');
 jimport( 'joomla.application.categories' );
 
-class SubatechModelArticles extends JModel
+class SubatechModelArticles extends JModelLegacy
 {
 	public function getItems()
 	{

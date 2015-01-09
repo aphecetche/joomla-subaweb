@@ -3,7 +3,7 @@ defined('_JEXEC') or die('Restricted access');
  
 jimport('joomla.application.component.view');
  
-class SubatechViewJob extends JView
+class SubatechViewJob extends JViewLegacy
 {
 	protected $item;
 	protected $params;

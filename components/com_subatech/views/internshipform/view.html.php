@@ -3,7 +3,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
 
-class SubatechViewInternshipForm extends JView
+class SubatechViewInternshipForm extends JViewLegacy
 {
 	protected $form;
 	protected $item;

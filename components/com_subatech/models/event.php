@@ -3,7 +3,7 @@ defined('_JEXEC') or die;
  
 jimport('joomla.application.component.model');
  
-class SubatechModelEvent extends JModel
+class SubatechModelEvent extends JModelLegacy
 {
 
 	protected $_context = 'com_subatech.event';

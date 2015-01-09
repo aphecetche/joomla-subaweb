@@ -8,7 +8,7 @@ jimport('joomla.application.component.controller');
 /**
  * Hello World Component Controller
  */
-class SubatechController extends JController
+class SubatechController extends JControllerLegacy
 {
     public function info()
     {

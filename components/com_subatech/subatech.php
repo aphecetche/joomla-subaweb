@@ -11,7 +11,7 @@ echo $language->load('com_subatech', JPATH_SITE, 'en-GB', true);
 echo $language->load('com_subatech', JPATH_SITE, null, true); 
  
  // Get an instance of the controller prefixed by Seminars
-$controller = JController::getInstance('Subatech');
+$controller = JControllerLegacy::getInstance('Subatech');
   
 // Perform the Request task
 $controller->execute(JRequest::getCmd('task'));
