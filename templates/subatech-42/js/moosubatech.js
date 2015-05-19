@@ -185,7 +185,7 @@ var subatech = {
 
 		header.adopt(title);
 
-		var closeButtonSpan = new Element('span.btn_cancel',{ 'html' : '<button type="submit">X</button>' });
+		var closeButtonSpan = new Element('span.btn_cancel',{ 'html' : '<button type="submit">X</button>' });
 
 		header.adopt(closeButtonSpan);
 		
@@ -420,7 +420,7 @@ var subatech = {
 		var sideShowDiv, sideShowDivSection;
 		
 		if (!div) {
-//			window.console.log('no sideshow to show');
+   //			window.console.log('no sideshow to show');
 			return;
 		}
 		
@@ -451,10 +451,10 @@ var subatech = {
            var y = bannerImage.getCoordinates().bottom - window.getScroll().y + 24;
            
            if ( y > 0 ) {
-                sideShowDiv.set('styles', { 'top' : y });
+                sideShowDiv.set('styles', { 'top' : y });
             }
             else {
-                sideShowDiv.set('styles', { 'top' : 0 });
+                sideShowDiv.set('styles', { 'top' : 0 });
 			}
 		};
 		

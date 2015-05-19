@@ -56,11 +56,12 @@
   
   $registered = ( $user->id ? "registered" : "" );
 
+  $extraJS = "";
   $escriptsrc=array();
   
       // get the headdata
     $headerstuff = $this->getHeadData();
-
+    
     
     $escriptsrc = array_merge($escriptsrc,$headerstuff['scripts']); // retrieve the existing js files
   
@@ -70,12 +71,12 @@
 
     $jsatstart = array();
     
-    // hack for jw_allvideos that must be loaded in the beginning
+    // hack for jw_allvideos and slimbox that must be loaded in the beginning
     foreach ( $escriptsrc as $src => $a ) {
-        if ( strstr($src,'jw_allvideos.js.php') ) {
+        if ( strstr($src,'jw_allvideos') ) {
             unset($escriptsrc[$src]);
             $jsatstart[$src] = 1;
-        }            
+        } 
         if ( strstr($src,'google') ) {
             unset($escriptsrc[$src]);
             $jsatstart[$src] = 1;
@@ -86,7 +87,7 @@
 
 
 
-  function generateHead($doc,&$a)
+  function generateHead($doc,&$a,&$extraJS)
   {      
 
         $tab = "";//$doc->_getTab();
@@ -223,24 +224,49 @@
          
         $customBuffer = '';
 
+
         foreach ($doc->_custom as $custom)
         {
+
             $lines = explode("\n",$custom);
+            $begin=false;
+            $s="";
             
             foreach ($lines as $l) {
-                if (strstr("$l","text/javascript")) {
-                    $i=stripos($l,"src=");                    
-                    $s = substr($l,$i+5);
-                    $i=stripos($s,'"');
-                    $s = substr($s,0,$i);
-                    $a["$s"] = array();            
+
+                if ($begin)
+                {
+                    if ( strstr("$l","/script") )
+                    {
+                        $begin = false;
+                        $extraJS .= $s;                     
+                    }
+                    else { $s .= $l;}
+                    
                 }
-                else {
-                    echo "$l\n";
+                if (strstr("$l","text/javascript") ) {
+                    if ( strstr("$l","script") && strstr("$l","/script") )
+                    {                     
+                        $i=stripos($l,"src=");                    
+                        $s = substr($l,$i+5);
+                        $i=stripos($s,'"');
+                        $s = substr($s,0,$i);                        
+                        $a["$s"] = array();
+                    }
+                    else 
+	                {
+	                   // that is the start of several lines of JS
+	                   $begin=true;
+	                   $s="";
+//	                   JFactory::getApplication()->enqueueMessage(htmlspecialchars("L=$l"));
+	                }
+                }
+                else                
+                  {
+                   if (!$begin) { echo "$l\n"; }
                 }
             }
-            
-            
+                 
         }
         
         return $buffer;      
@@ -276,8 +302,9 @@ else {
         echo "<script src=\"$src\" type=\"text/javascript\"></script>\n";
     }   
     
-    
-    echo generateHead($this,$escriptsrc);
+
+    echo generateHead($this,$escriptsrc,$extraJS);
+
 } 
 ?> 
 
@@ -319,6 +346,8 @@ enhance(
             {
                 echo $content;
             }
+            echo $extraJS;
+            
             ?>
         }
         });
@@ -331,6 +360,9 @@ enhance(
 <script src="<?php echo $this->baseurl ?>/templates/subatech-42/js/moosubatech.js" type="text/javascript"></script>
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script src="<?php echo $this->baseurl ?>/templates/subatech-42/js/zslimbox.js" type="text/javascript" mime="text/javascript"></script>
+
 <?php endif; ?>
 
 <!--[if (lt IE 9)]>
@@ -346,7 +378,6 @@ document.createElement('hgroup');
 <link href="<?php echo $this->baseurl ?>/templates/subatech-42/css/ie.css" rel="stylesheet" type="text/css" >
 <![endif]-->
 
-       <script src="<?php echo $this->baseurl ?>/templates/subatech-42/js/zslimbox.js" type="text/javascript" mime="text/javascript"></script>
        
 </head>
 
@@ -433,9 +464,6 @@ document.createElement('hgroup');
 <div id="endnote">
 <jdoc:include type="modules" name="endnote" />
 </div>
-
-<h3>hello there</h3>
-
 
 </body>
 </html>

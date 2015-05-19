@@ -17,9 +17,15 @@ class SubatechViewJob extends JViewLegacy
         $dispatcher = JDispatcher::getInstance();
 
         // dispatch so that e.g. the email cloak plugin can run on "misc" and "description" parts of the job
-        $dispatcher->trigger('onContentPrepare', array ('com.subatech.job', &$this->item->misc, &$this->params, 0));        
-        $dispatcher->trigger('onContentPrepare', array ('com.subatech.job', &$this->item->description, &$this->params, 0));        
-        
+                
+            $this->item->text = $this->item->misc;
+            $dispatcher->trigger('onContentPrepare', array ('com.subatech.job', &$this->item, &$this->params, 0));
+            $this->item->misc = $this->item->text;
+
+          $this->item->text = $this->item->description;
+            $dispatcher->trigger('onContentPrepare', array ('com.subatech.job', &$this->item, &$this->params, 0));
+            $this->item->description = $this->item->text;
+
 		parent::display($tpl);
 	}
 }

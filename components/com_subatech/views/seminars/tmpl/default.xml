@@ -17,9 +17,10 @@
                 default="1"
                 label="COM_SUBATECH_SEMINARS_VIEW_SHOW_LOCATION"
                 description="COM_SUBATECH_SEMINARS_VIEW_SHOW_LOCATION_DESC"
+                >
                 <option value="0">JHIDE</option>
                 <option value="1">JSHOW</option>
-                 />
+                </field>
 		</fieldset>
 	</fields>
 </metadata>

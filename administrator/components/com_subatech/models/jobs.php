@@ -35,7 +35,7 @@ class SubatechModelJobs extends JModelList
 				'j.id, j.date_start, j.date_reply, j.type, '.
 				'j.alias, j.description_' . $ltag . ' as description,' .
 				'j.checked_out, j.checked_out_time, '.
-				'j.title_'. $ltatg . ' as title,' .
+				'j.title_'. $ltag . ' as title,' .
                 'j.state,j.created,j.created_by,j.modified,j.modified_by,j.publish_up,j.publish_down,'.
                 'j.attribs','j.keywords,j.needed_skills,'.
                 'j.misc_' . $ltag . ' as misc'

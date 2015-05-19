@@ -3,7 +3,7 @@ defined('_JEXEC') or die;
  
 jimport('joomla.application.component.model');
  
-class SubatechModelSeminar extends JModel
+class SubatechModelSeminar extends JModelLegacy
 {
 
 	//protected $_context = 'com_subatech.seminar';

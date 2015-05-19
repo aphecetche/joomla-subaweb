@@ -15,6 +15,6 @@ jimport('joomla.application.component.controller');
 $document = JFactory::getDocument();
 $document->addStyleDeclaration('.icon-48-subatech {background-image: url(../media/com_subatech/images/icon-48x48.png);}');
   
-$controller = JController::getInstance('Subatech');
+$controller = JControllerLegacy::getInstance('Subatech');
 $controller->execute(JRequest::getCmd('task'));
 $controller->redirect();
