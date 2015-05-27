@@ -34,8 +34,8 @@ class SubatechModelSeminars extends JModelList
 		
 		return $query;
 	}
-	
-	protected function populateState()
+
+    protected function populateState($ordering = null, $direction = null)
 	{
 		$app = JFactory::getApplication();
 
