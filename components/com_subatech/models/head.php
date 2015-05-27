@@ -45,7 +45,7 @@ class SubatechModelHead extends JModelList
 		return $items;
 	}
 
-    protected function populateState()
+   protected function populateState($ordering = null, $direction = null)
 	{		
 		// Load state from the request.
 		
