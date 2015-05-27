@@ -67,7 +67,7 @@ class modLDAPSearchHelper
 	    if ( $attr["cn"]["count"] ) 
 	    {
 			$items[] = array( "cn" => $attr["cn"][0],
-      			"title" =>  $attr["title"][0],
+      			"title" =>  ( in_array("title",$attr) ? $attr["title"][0] : "" ),
       			"roomNumber" => ( in_array("roomNumber",$attr) ? $attr["roomNumber"][0] : "" ),
       			"telephoneNumber" => ( in_array("telephoneNumber",$attr) ? $attr["telephoneNumber"][0] : "" ),
       			"mail" => ( in_array("mail",$attr) ? $attr["mail"][0] : "" ),
