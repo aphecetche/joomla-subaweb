@@ -32,14 +32,14 @@
   
   // Get the user group into $body variable
   $body = '';
-  $user =& JFactory::getUser();
+  $user = JFactory::getUser();
   $userGroups = $user->getAuthorisedGroups();
   if (count($userGroups))
   {
     rsort($userGroups);
     foreach ( $userGroups as $groupId )
     {
-      $db =& JFactory::getDBO();
+      $db = JFactory::getDBO();
       $query = 'SELECT title FROM #__usergroups WHERE id = ' . $groupId;
       $db->setQuery($query,0,1);
       $groupName = $db->loadResult();

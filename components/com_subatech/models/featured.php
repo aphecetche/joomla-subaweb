@@ -26,7 +26,7 @@ class SubatechModelFeatured extends JModelList
         return $datecondition;                                    
     }
     
-    public function getSeminars($seminars)
+    public function getSeminars(&$seminars)
     {
         $datecondition = $this->getDateCondition('seminars','date');
         
@@ -55,7 +55,7 @@ class SubatechModelFeatured extends JModelList
         uasort($seminars,'cmp');           
     }
     
-    public function getEvents($events)
+    public function getEvents(&$events)
     {
         $datecondition = $this->getDateCondition('events','date_start');
         
@@ -85,7 +85,7 @@ class SubatechModelFeatured extends JModelList
         
     }
       
-    public function getJobs($jobs,$phds)
+    public function getJobs(&$jobs,$phds)
     {
         $ltag = str_replace("-","_",JFactory::getLanguage()->getTag());
         
@@ -141,7 +141,7 @@ class SubatechModelFeatured extends JModelList
         uasort($jobs,'cmp');
     }
       
-    public function getInternships($internships)
+    public function getInternships(&$internships)
     {
         $datecondition = $this->getDateCondition('internships','date_start');
         
@@ -204,21 +204,21 @@ class SubatechModelFeatured extends JModelList
 
 		$items["head"] = $db->loadAssoc();
 
-        $this->getSeminars(&$items[$indexSeminars]);
+        $this->getSeminars($items[$indexSeminars]);
         
-		$this->getEvents(&$items[$indexEvents]);
+		$this->getEvents($items[$indexEvents]);
 		
-		$this->getJobs(&$items[$indexJobs],false);
+		$this->getJobs($items[$indexJobs],false);
 		
-        $this->getJobs(&$items[$indexPhds],true);
+        $this->getJobs($items[$indexPhds],true);
 
-	    $this->getInternships(&$items[$indexInternships]);
+	    $this->getInternships($items[$indexInternships]);
         			
         
 		return $items;
 	}
 
-   protected function populateState()
+    protected function populateState($ordering = null, $direction = null)
 	{		
 		// Load state from the request.
 		
