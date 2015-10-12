@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="1.7" type="template" client="site" method="upgrade">
-	<name>subatech-42-9</name>
-	<creationDate>2015-10-12</creationDate>
+	<name>MYNAME</name>
+	<creationDate>MYDATE</creationDate>
 	<author>Laurent Aphecetche</author>
 	<authorEmail>laurent.aphecetche@subatech.in2p3.fr</authorEmail>
 	<authorUrl>http://cern.ch/laurent.aphecetche</authorUrl>
 	<copyright>Copyright (C) 2012 Subatech</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>9.0.0</version>
+	<version>MYVERSION</version>
 	<description>TPL_SUBATECH_42_XML_DESCRIPTION</description>
 
 	<files>

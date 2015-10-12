@@ -19,13 +19,13 @@ defined('_JEXEC') or die;
 <?php if ($this->error->getCode()>=400 && $this->error->getCode() <= 500) { 	?>
 
 
-<link href="<?php echo $this->baseurl ?>/templates/subatech-42-9/css/error.css" rel="stylesheet" type="text/css" >
+<link href="<?php echo $this->baseurl ?>/templates/subatech-42/css/error.css" rel="stylesheet" type="text/css" >
 
 </head>
 
 <body>
 
-<img src="<?php echo $this->baseurl ?>/templates/subatech-42-9/images/logo-subatech.png" />
+<img src="<?php echo $this->baseurl ?>/templates/subatech-42/images/logo-subatech.png" />
 
 <h2>Oups. Petit problème.</h2>
 
