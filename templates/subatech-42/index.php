@@ -59,7 +59,7 @@
   
     $escriptsrc["http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"] = array( 'mime' => 'text/javascript');  
     
-    $escriptsrc["$this->baseurl/templates/subatech-42/js/moosubatech.js"] = array( 'mime' => 'text/javascript');            
+    $escriptsrc["$this->baseurl/templates/subatech-42-9/js/moosubatech.js"] = array( 'mime' => 'text/javascript');            
 
     $jsatstart = array();
     
@@ -75,7 +75,7 @@
         }            
     }   
 
-    $escriptsrc["$this->baseurl/templates/subatech-42/js/selectivizr-min.js"] = array( 'mime' => 'text/javascript', 'iecondition' => 'lt IE 9' );
+    $escriptsrc["$this->baseurl/templates/subatech-42-9/js/selectivizr-min.js"] = array( 'mime' => 'text/javascript', 'iecondition' => 'lt IE 9' );
 
 
   function generateHead($doc,&$a)
@@ -249,15 +249,15 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $this->baseurl ?>/templates/subatech-42/images/ios/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $this->baseurl ?>/templates/subatech-42/images/ios/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon-precomposed" href="<?php echo $this->baseurl ?>/templates/subatech-42/images/l/apple-touch-icon-57x57.png">
-<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/subatech-42/images/ios/apple-touch-icon-57x57.png">
-<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/subatech-42/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $this->baseurl ?>/templates/subatech-42-9/images/ios/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $this->baseurl ?>/templates/subatech-42-9/images/ios/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" href="<?php echo $this->baseurl ?>/templates/subatech-42-9/images/l/apple-touch-icon-57x57.png">
+<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/subatech-42-9/images/ios/apple-touch-icon-57x57.png">
+<link rel="shortcut icon" href="<?php echo $this->baseurl ?>/templates/subatech-42-9/favicon.ico">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-startup-image" href="<?php echo $this->baseurl ?>/templates/subatech-42/images/ios/splash.png">
+<link rel="apple-touch-startup-image" href="<?php echo $this->baseurl ?>/templates/subatech-42-9/images/ios/splash.png">
 
 <?php 
 if ( $registered ) { 
@@ -273,17 +273,17 @@ else {
 } 
 ?> 
 
-<link href="<?php echo $this->baseurl ?>/templates/subatech-42/css/basic.css" rel="stylesheet" type="text/css" >
+<link href="<?php echo $this->baseurl ?>/templates/subatech-42-9/css/basic.css" rel="stylesheet" type="text/css" >
 
 <?php if ( ! $registered) : ?>
 <!-- EnhanceJS from Designing With Progressive Enhancement book-->
-<script src="<?php echo $this->baseurl ?>/templates/subatech-42/js/enhance.js" type="text/javascript"></script>
+<script src="<?php echo $this->baseurl ?>/templates/subatech-42-9/js/enhance.js" type="text/javascript"></script>
  
 <script type="text/javascript">
 enhance(
         {
         loadStyles: [
-          "<?php echo $this->baseurl ?>/templates/subatech-42/css/enhanced.css"
+          "<?php echo $this->baseurl ?>/templates/subatech-42-9/css/enhanced.css"
         ],
         loadScripts: [
             <?php
@@ -319,8 +319,8 @@ enhance(
 
 <?php else: ?>
     
-<link href="<?php echo $this->baseurl ?>/templates/subatech-42/css/enhanced.css" rel="stylesheet" type="text/css" >
-<script src="<?php echo $this->baseurl ?>/templates/subatech-42/js/moosubatech.js" type="text/javascript"></script>
+<link href="<?php echo $this->baseurl ?>/templates/subatech-42-9/css/enhanced.css" rel="stylesheet" type="text/css" >
+<script src="<?php echo $this->baseurl ?>/templates/subatech-42-9/js/moosubatech.js" type="text/javascript"></script>
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <?php endif; ?>
@@ -335,7 +335,7 @@ document.createElement('nav');
 document.createElement('article');
 document.createElement('hgroup');
 </script>
-<link href="<?php echo $this->baseurl ?>/templates/subatech-42/css/ie.css" rel="stylesheet" type="text/css" >
+<link href="<?php echo $this->baseurl ?>/templates/subatech-42-9/css/ie.css" rel="stylesheet" type="text/css" >
 <![endif]-->
 
        
