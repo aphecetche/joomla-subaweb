@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="1.7.3" client="site" method="install">
+<extension type="module" version="1.7.3" client="site" method="upgrade">
 <name>LDAP Search</name>
 <author>Laurent Aphecetche</author>
-<creationDate>January 2012</creationDate>
+<creationDate>June 2015</creationDate>
 <copyright>Copyright Laurent Aphecetche (c) 2012</copyright>
 <license>GNU General Public License version 2 or later</license>
 <authorEmail>laurent.aphecetche@subatech.in2p3.fr</authorEmail>
 <authorUrl>cern.ch/laurent.aphecetche</authorUrl>
-<version>1.0</version>
+<version>3.0</version>
 <description>MOD_LDAPSEARCH_XML_DESCRIPTION</description>
 <files>
 <filename module="mod_ldapsearch">mod_ldapsearch.php</filename>
