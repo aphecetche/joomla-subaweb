@@ -33,8 +33,9 @@ if ( count($rparts) &&
         "theorie-haute-energie" => JText::_('TPL_SUBATECH_42_THEORIE_HE'),
         "theorie-basse-energie" => JText::_('TPL_SUBATECH_42_THEORIE_BE'),
         "high-energy-theory" => JText::_('TPL_SUBATECH_42_THEORIE_HE'),
-        "low-energy-theory" => JText::_('TPL_SUBATECH_42_THEORIE_BE')
-    );
+        "low-energy-theory" => JText::_('TPL_SUBATECH_42_THEORIE_BE'),
+        "theorie" => JText::_('TPL_SUBATECH_42_THEORIE'),
+        "theory" => JText::_('TPL_SUBATECH_42_THEORIE')    );
     
     $title = JText::sprintf('TPL_SUBATECH_42_GROUPE', $groups[$rparts[2]]);
 }
