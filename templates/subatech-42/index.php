@@ -9,7 +9,7 @@
   
   function getBannerImageName() 
   {
-    $db =& JFactory::getDBO();
+    $db = JFactory::getDBO();
     $thisArticle=JRequest::getInt('id');
     $query = 'SELECT title FROM #__categories WHERE id IN (SELECT catid from #__content WHERE id = ' . $thisArticle . ')';
     $db->setQuery($query, 0, 1);
