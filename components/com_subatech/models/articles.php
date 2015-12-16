@@ -8,9 +8,9 @@ class SubatechModelArticles extends JModelLegacy
 {
 	public function getItems()
 	{
-	  	$user =& JFactory::getUser();
+	  	$user = JFactory::getUser();
   		  		
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 
 		$query = $db->getQuery(true);
 		$query->select('a.id,a.title,c.title,'.
@@ -35,9 +35,9 @@ class SubatechModelArticles extends JModelLegacy
 	{
 	    $params = array();
 
-  		$user =& JFactory::getUser();
+  		$user = JFactory::getUser();
   		  		
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		
 		$query = $db->getQuery(true);
 		$query->select('title');
