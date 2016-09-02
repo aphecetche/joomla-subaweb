@@ -22,7 +22,7 @@ if ( $this->params->get("show-jobs") > 0 )
 {
   $array[] =  array (  'title' => 'COM_SUBATECH_JOBS',
                         'view' => 'jobs',
-                        'extra' => 'jobtype=!thèse');                           
+                        'extra' => 'jobtype!=thèse');                           
 }
 
 if ( $this->params->get("show-phds") > 0 )
@@ -52,7 +52,8 @@ function displayTab($items,$a)
   
   echo "<h2>" . JText::_($what) . "</h2>";
   
-  echo "<ul>"; 
+  echo "<ul>";
+   
 $i=0;
 foreach ($items[$index] as $item) {
 	

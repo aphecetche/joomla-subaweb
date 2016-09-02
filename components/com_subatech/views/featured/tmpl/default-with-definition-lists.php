@@ -11,6 +11,8 @@ function displayTab($items,$what)
   if (count($items[$index])==0) return;
   
   echo "<h2>" . JText::_($what) . "</h2>";
+
+echo "toto";
   
   echo "<ul id=$index>"; 
 $i=0;

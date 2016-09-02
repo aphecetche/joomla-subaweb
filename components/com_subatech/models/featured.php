@@ -101,26 +101,27 @@ class SubatechModelFeatured extends JModelList
         $db = JFactory::getDbo();
         
         $query = $db -> getQuery(true);
-        $query -> select('id, title_' . $ltag . ' as title, date_start as date, type, description_' . $ltag . ' as description');
+        $query -> select('id, state, title_' . $ltag . ' as title, date_start as date, type, description_' . $ltag . ' as description');
         $query -> from('#__jobs') 
-        -> where("state=1");
+        -> where("(state=1)");
         
         if  ($phds==false)
         {
-          $query->where("type != 'thèse'");
+          $query->where("(type!='thèse')");
         }
         else
         {
-          $query->where("type = 'thèse'");            
+          $query->where("(type='thèse')");            
         }
         
-        $query->where($datecondition);
+        $query->where("(".$datecondition.")");
         
         $db -> setQuery($query);
 
         $rows = $db->loadObjectList();
-
+        
         if (count($rows)) {
+            
           foreach ($rows as $r => $row) 
           {
             $row -> link = 'index.php?option=com_subatech&view=job&id=' . $row -> id;

@@ -3,7 +3,7 @@ defined('_JEXEC') or die;
 
 jimport('joomla.application.component.view');
 
-class SubatechViewInternships extends JView
+class SubatechViewInternships extends JViewLegacy
 {
   protected $items;
   protected $pagination;
