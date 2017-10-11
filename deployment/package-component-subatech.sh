@@ -13,9 +13,10 @@ version=${version//[[:space:]]/} # remove spaces
 version=${version/<version>/} # remove <version>
 version=${version/<\/version>/} # remove </version>
 
-dest="$HOME/Sites/joomla-dev/packages/component-subatech-$version.tar.gz"
+topdir="$HOME/Mind/@Archive/2017/joomla-dev"
 
-src="$HOME/Sites/joomla-dev/importlabo/mamp.subatech.in2p3.fr"
+dest="$topdir/packages/component-subatech-$version.tar.gz"
+src="$topdir/importlabo/www"
 
 rm -f $dest
 
@@ -31,10 +32,11 @@ cp -a $src/components/com_$component/ $dir/site
 
 cp -a $src/media/com_$component/ $dir/media
 
-cp $component.xml $dir/
+cp -f $component.xml $dir/
 
-rm $dir/admin/$component.xml
+rm -f $dir/admin/$component.xml
 
+echo "coucou"
 tar -c --exclude='._*' --exclude='.svn' --exclude='.DS_Store' --exclude='*.bak' --exclude='*~' --exclude='.project'  -vzf $dest com_$component
 
 rm -rf $dir

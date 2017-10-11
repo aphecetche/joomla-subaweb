@@ -3,14 +3,14 @@
  
 	<name>com_subatech</name>
 	<!-- The following elements are optional and free of formatting constraints -->
-	<creationDate>June 2015</creationDate>
+	<creationDate>October 2017</creationDate>
 	<author>Laurent Aphecetche</author>
 	<authorEmail>laurent@aphecetche.fr</authorEmail>
 	<authorUrl>laurent.aphecetche.fr</authorUrl>
-	<copyright>(c) 2012-2013 Laurent Aphecetche</copyright>
+	<copyright>(c) 2012-2017 Laurent Aphecetche</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>3.1</version>
+	<version>3.2</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>COM_SUBATECH_DESCRIPTION</description>
  
