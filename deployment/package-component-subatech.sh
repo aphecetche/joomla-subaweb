@@ -14,7 +14,6 @@ version=${version/<version>/} # remove <version>
 version=${version/<\/version>/} # remove </version>
 
 topdir="$HOME/Mind/@Archive/2017/joomla-dev"
-
 dest="$topdir/packages/component-subatech-$version.tar.gz"
 src="$topdir/importlabo/www"
 

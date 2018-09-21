@@ -4,7 +4,9 @@ export COPYFILE_DISABLE=true
 
 module="ldapsearch"
 
-src="$HOME/Sites/joomla-dev/importlabo/mamp.subatech.in2p3.fr"
+topdir="$HOME/Mind/@Archive/2018/joomla-dev"
+
+src="$topdir/importlabo/www"
 
 version=$(grep "<version>" $src/modules/mod_$module/mod_$module.xml)
 
@@ -15,8 +17,7 @@ version=${version//[[:space:]]/} # remove spaces
 version=${version/<version>/} # remove <version>
 version=${version/<\/version>/} # remove </version>
 
-dest="$HOME/Sites/joomla-dev/packages/mod_$module-$version.tar.gz"
-
+dest="$topdir/packages/mod_$module-$version.tar.gz"
 
 rm -f $dest
 
