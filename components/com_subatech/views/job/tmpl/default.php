@@ -23,13 +23,12 @@ if  ($type==="thèse")
         "plasma" => "Plasma",
         "prisma" => "Prisma" ,
         "xenon" => JText::_('COM_SUBATECH_GROUPS_XENON'),
-        "erdre" => "Erdre",
+        "sen" => "SEN",
         "astro" => "Astro",
         "radiochimie" => JText::_('COM_SUBATECH_GROUPS_RADIOCHEMISTRY'),
-        "theorie-haute-energie" => JText::_('COM_SUBATECH_GROUPS_THEORIE_HE'),
-        "theorie-basse-energie" => JText::_('COM_SUBATECH_GROUPS_THEORIE_BE'),
-        "high-energy-theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE_HE'),
-        "low-energy-theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE_BE')
+        "theorie" => JText::_('COM_SUBATECH_GROUPS_THEORIE'),
+        "theory" => JText::_('COM_SUBATECH_GROUPS_THEORIE'),
+        "neutrino" => "Neutrino"
     );
     
 ?>
