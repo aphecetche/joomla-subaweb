@@ -103,6 +103,10 @@ echo "</div>";
 <?php echo $head["introtext"]; ?>	
 </div>
 
+<div id="latest-giga-news">
+<?php echo JHtml::_('content.prepare', '{loadposition news-before-events}'); ?>
+</div>
+
 <div id="featured">
 	
 <ul id="featured-links">
@@ -125,5 +129,8 @@ foreach ( $array as $a )
 displayTab($this->items,$a); ?>
 </div>
 
+<div id="latest-news">
+<?php echo JHtml::_('content.prepare', '{loadposition news-after-events}'); ?>
+</div>
 </div>
 
