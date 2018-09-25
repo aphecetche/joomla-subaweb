@@ -11,7 +11,7 @@ echo "currentversion=$currentversion version=$version"
 
 a=`pwd`
 
-topdir="$HOME/Mind/@Archive/2017/joomla-dev"
+topdir="$HOME/Mind/@Archive/2018/joomla-dev"
 
 dest="$topdir/packages/subatech-42-$version.tar.gz"
 src="$topdir/importlabo/www/templates/subatech-42-$currentversion"
