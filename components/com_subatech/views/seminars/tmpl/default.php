@@ -37,7 +37,7 @@ $future = (int) ( $date > $now );
 <?php endif ?>
 </div>
 <?php if ( $this->params->get('show_location',1) == 1 &&  ($future > 0 )): ?>
-<div class="time"><?php echo JHtml::_('date',$item->date,'H \h i'); ?></div>
+<div class="time"><?php echo $date->format('H \h i')?></div>
 <div class="location"><?php echo $this->escape($item->location) ?></div>
 <?php endif ?>
 </div>
