@@ -2,86 +2,89 @@
 
 defined('_JEXEC') or die;
 
+function containsAtLeastOneDigit($var) {
+    return !preg_match('/\d/',$var);
+}
+
 class modLDAPSearchHelper
 {
-/**
-  * Returns the list of people of group
-  */
-  
-  public function getItems($s1,$s2="")
-  {
-  
-  	$items = array();
+    /**
+     * Returns the list of people of group
+     */
 
-	$ds = ldap_connect("ldap.in2p3.fr");
- 
-	if (!$ds)	
-	{			
-	  return $items;
-	}
+    public function getItems($s1,$s2="")
+    {
 
-	
-	$ok = ldap_bind($ds);
+        $items = array();
 
-	if (!$ok)
-	{
-  	return;
-	}
+        $ldaphost="ldaps://ccdirectory.in2p3.fr";
+        $ds = ldap_connect($ldaphost);
 
-# ldapsearch -x  -h ldap.in2p3.fr -b "ou=people,ou=subatech,o=in2p3,c=fr" 
-# "(&(businessCategory=electronique)(|(businessCategory=chef*)))"
+        if (!$ds)	
+        {			
+            return $items;
+        }
 
+        ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
 
-	$base_dn="ou=people,ou=subatech,o=in2p3,c=fr";
+        $ok = ldap_bind($ds);
 
-	$filter="(&(businessCategory=$s1)";
-	
-	if ( isset($s2) && strlen($s2)>0 )
-	{
-		$filter .= "(|(businessCategory=$s2)))";
-	}
-	else
-	{
-		$filter .= ')';
-	}
+        if (!$ok)
+        {
+            return $items;
+        }
 
-#	print($filter);
-	
-#	$justthese=array("cn");
+        # ldapsearch -x -H ldaps://ccdirectory.in2p3.fr -b "ou=people,dc=in2p3,dc=fr" 
+        # "(&(businessCategory=electronique)(|(businessCategory=chef*)))"
 
-	$sr=ldap_search($ds, $base_dn, $filter);
+        $base_dn="ou=people,dc=in2p3,dc=fr";
 
-	if (!$sr)
-	{
-	  return $items;
-	}
+        $filter="(&(businessCategory=$s1)(ou=UMR6457)";
 
+        if ( isset($s2) && strlen($s2)>0 )
+        {
+            $filter .= "(|(businessCategory=$s2)))";
+        }
+        else
+        {
+            $filter .= ')';
+        }
 
-	for ($entryID=ldap_first_entry($ds,$sr);
-    	        $entryID!=false;
-        	    $entryID=ldap_next_entry($ds,$entryID))
-	{
-    	$attr = ldap_get_attributes($ds,$entryID);
+        $sr=ldap_search($ds, $base_dn, $filter);
 
-	    /* we take the first value of each attribute */
-	    if ( $attr["cn"]["count"] ) 
-	    {
-			$items[] = array( "cn" => $attr["cn"][0],
-      			"title" =>  ( in_array("title",$attr) ? $attr["title"][0] : "" ),
-      			"roomNumber" => ( in_array("roomNumber",$attr) ? $attr["roomNumber"][0] : "" ),
-      			"telephoneNumber" => ( in_array("telephoneNumber",$attr) ? $attr["telephoneNumber"][0] : "" ),
-      			"mail" => ( in_array("mail",$attr) ? $attr["mail"][0] : "" ),
-      			"jpegPhoto" => ( in_array("jpegPhoto",$attr) ? $attr["jpegPhoto"][0] : "" ),
-);
-		}
-	}
-    
-    sort($items);
-    
-	ldap_close($ds);
+        if (!$sr)
+        {
+            return $items;
+        }
 
-	return $items;
-	}  //end getItems
+        for ($entryID=ldap_first_entry($ds,$sr);
+        $entryID!=false;
+        $entryID=ldap_next_entry($ds,$entryID))
+        {
+            $attr = ldap_get_attributes($ds,$entryID);
+
+            /* we take the first value of each attribute */
+            if ( $attr["cn"]["count"] ) 
+            {
+                $cn = $attr["cn"][0];
+                $parts = explode(" ",$cn);
+                $name = implode(" ",array_filter($parts,"containsAtLeastOneDigit"));
+                $items[] = array( "cn" => $name,
+                    "title" =>  ( in_array("title",$attr) ? $attr["title"][0] : "" ),
+                    "roomNumber" => ( in_array("roomNumber",$attr) ? $attr["roomNumber"][0] : "" ),
+                    "telephoneNumber" => ( in_array("telephoneNumber",$attr) ? $attr["telephoneNumber"][0] : "" ),
+                    "mail" => ( in_array("mail",$attr) ? $attr["mail"][0] : "" ),
+                    "jpegPhoto" => ( in_array("jpegPhoto",$attr) ? $attr["jpegPhoto"][0] : "" ),
+                );
+            }
+        }
+
+        sort($items);
+
+        ldap_close($ds);
+
+        return $items;
+    }  //end getItems
 
 } // end class
 
