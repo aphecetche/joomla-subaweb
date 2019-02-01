@@ -10,6 +10,8 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 <div class="job list">
 
+<a href="/fr/enseignement/propositions-de-stages">Propositions de stages</a>
+
 <?php foreach ($this->items as $item): ?>
     
 <?php $url = 'index.php?option=com_subatech&view=job&id=' . $item->id; ?>

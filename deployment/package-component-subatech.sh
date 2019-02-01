@@ -13,9 +13,12 @@ version=${version//[[:space:]]/} # remove spaces
 version=${version/<version>/} # remove <version>
 version=${version/<\/version>/} # remove </version>
 
-topdir="$HOME/Mind/@Archive/2018/joomla-dev"
+topdir="$HOME/github.com/aphecetche/joomla-subaweb"
 dest="$topdir/packages/component-subatech-$version.tar.gz"
-src="$topdir/importlabo/www"
+
+src="$HOME/github.com/aphecetche/docker-subaweb/www"
+
+mkdir -p "$topdir/packages"
 
 rm -f $dest
 
@@ -35,7 +38,6 @@ cp -f $component.xml $dir/
 
 rm -f $dir/admin/$component.xml
 
-echo "coucou"
 tar -c --exclude='._*' --exclude='.svn' --exclude='.DS_Store' --exclude='*.bak' --exclude='*~' --exclude='.project'  -vzf $dest com_$component
 
 rm -rf $dir

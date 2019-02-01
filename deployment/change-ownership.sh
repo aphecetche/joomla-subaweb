@@ -1,4 +1,4 @@
-src="$HOME/Sites/joomla-dev/importlabo/mamp.subatech.in2p3.fr"
+src="$HOME/github.com/aphecetche/docker-subaweb/www"
 
 chmod -R o+w $src/components/com_subatech
 chmod -R g+w $src/components/com_subatech

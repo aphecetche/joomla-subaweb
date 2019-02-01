@@ -4,9 +4,9 @@ export COPYFILE_DISABLE=true
 
 module="ldapsearch"
 
-topdir="$HOME/Mind/@Archive/2018/joomla-dev"
+topdir="$HOME/github.com/aphecetche/docker-subaweb"
 
-src="$topdir/importlabo/www"
+src="$topdir/www"
 
 version=$(grep "<version>" $src/modules/mod_$module/mod_$module.xml)
 
@@ -17,7 +17,7 @@ version=${version//[[:space:]]/} # remove spaces
 version=${version/<version>/} # remove <version>
 version=${version/<\/version>/} # remove </version>
 
-dest="$topdir/packages/mod_$module-$version.tar.gz"
+dest="$HOME/github.com/aphecetche/joomla-subaweb/packages/mod_$module-$version.tar.gz"
 
 rm -f $dest
 

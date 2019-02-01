@@ -13,12 +13,14 @@ if ( $this->params->get("show-events") > 0 )
   $array[] =  array (  'title' => 'COM_SUBATECH_EVENTS',
                         'view' => 'events' );
 }
+
 if ( $this->params->get("show-seminars") > 0 )
 {
   $array[] =  array (  'title' => 'COM_SUBATECH_SEMINARS',
                         'view' => 'seminars');                           
 }
-if ( $this->params->get("show-jobs") > 0 )
+
+if ( $this->params->get("show-jobs") >=0 )
 {
   $array[] =  array (  'title' => 'COM_SUBATECH_JOBS',
                         'view' => 'jobs',
@@ -45,15 +47,23 @@ function displayTab($items,$a)
   $what=$a['title'];
   
   $index = '"' . JText::_($what) . '"';
-  
-  if (count($items[$index])==0) return;
-  
+
   echo '<div id="' . JText::_($what.'_ID') . '">';
   
   echo "<h2>" . JText::_($what) . "</h2>";
-  
+
   echo "<ul>";
-   
+
+  if (count($items[$index])==0 ) {
+          if ( $what == COM_SUBATECH_JOBS ) {
+                  // temporary : always show to allow link to "stages"
+                  // proper way to do it => use the INTERNSHIPS database
+                  echo '<li><a href="/fr/enseignement/propositions-de-stages">Propositions de stages</a></li>';
+          } 
+          echo "</ul></div>";
+          return;
+  }
+
 $i=0;
 foreach ($items[$index] as $item) {
 	
@@ -116,7 +126,7 @@ echo "</div>";
 foreach ( $array as $a )
 {
     $what=$a['title'];
-    if (count($this->items['"' . JText::_($what) .'"'])) 
+    if (count($this->items['"' . JText::_($what) .'"']) || $what==COM_SUBATECH_JOBS) 
     {
       echo '<li><a href="#' . JText::_($what.'_ID'). '">'. JText::_($what) . '</a></li>';
 	}
