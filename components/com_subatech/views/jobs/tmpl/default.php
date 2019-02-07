@@ -4,13 +4,20 @@ defined('_JEXEC') or die('Restricted access');
 
 $document = JFactory::getDocument();
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
+
+function cmp($a,$b) {
+return $a->date_start < $b->date_start;
+}
+
+
+usort($this->items,cmp);
 ?>
 
 <h1><?php echo $this->title; ?></h1>
 
 <div class="job list">
 
-<a href="/fr/enseignement/propositions-de-stages">Propositions de stages</a>
+<p style="font-size: 1.6rem; margin-bottom: 2em">Vous recherchez un stage ? Les <a href="/fr/enseignement/propositions-de-stages">propositions de stages</a> se trouvent sous l'onglet "Enseignement".</p>
 
 <?php foreach ($this->items as $item): ?>
     

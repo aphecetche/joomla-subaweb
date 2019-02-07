@@ -40,13 +40,18 @@
 			COM_SUBATECH_SEMINAR_TYPE_GENERALISTE</option>
 		<option value="ITA">
 			COM_SUBATECH_SEMINAR_TYPE_ITA</option>
+		<option value="soutenance-thèse">
+			COM_SUBATECH_SEMINAR_TYPE_SOUTENANCE_THESE</option>
+		<option value="communication-scientifique">
+			COM_SUBATECH_SEMINAR_TYPE_COMMUNICATION_SCIENTIFIQUE</option>
+		<option value="heures-thésards">
+			COM_SUBATECH_SEMINAR_TYPE_HEURES_THESARDS</option>
 	</field>
 
 	<field name="summary"
 		type="editor"
 		class="inputbox"
 		label="COM_SUBATECH_SEMINAR_SUMMARY_LABEL"
-		description="COM_SUBATECH_SEMINAR_SUMMARY_DESC"
 		filter="JComponentHelper::filterText"
 		buttons="false"
 	/>
@@ -66,9 +71,11 @@
 		type="calendar"
 		label="COM_SUBATECH_SEMINAR_DATE_LABEL"
 		description="COM_SUBATECH_SEMINAR_DATE_DESC"
-		class="inputbox"
-		size="30"
-		required="false"
+		class="input-medium"
+    required="false"
+    showtime="true"
+    format="%Y-%m-%d %H:%M:%S"
+    filter="user_utc"
 	/>
 </fieldset>
 
@@ -108,6 +115,65 @@
 
 </fieldset>
 
+<fieldset name="part2">
+	<field name="chair"
+		type="text"
+		label="COM_SUBATECH_SEMINAR_CHAIR_LABEL"
+		description="COM_SUBATECH_SEMINAR_CHAIR_DESC"
+		class="inputbox"
+		size="60"
+		required="false"
+  />
+	<field name="title2"
+		type="text"
+		label="COM_SUBATECH_SEMINAR_TITLE_LABEL"
+		description="COM_SUBATECH_SEMINAR_TITLE_DESC"
+		class="inputbox"
+		size="60"
+		required="false"
+    default=""
+  />
+	<field name="summary2"
+		type="editor"
+		class="inputbox"
+		label="COM_SUBATECH_SEMINAR_SUMMARY_LABEL"
+		filter="JComponentHelper::filterText"
+		buttons="false"
+	/>
+	<field name="author2"
+		type="text"
+		label="COM_SUBATECH_SEMINAR_AUTHOR_LABEL"
+		description="COM_SUBATECH_SEMINAR_AUTHOR_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+	<field name="author_url2"
+		type="text"
+		label="COM_SUBATECH_SEMINAR_AUTHOR_URL_LABEL"
+		description="COM_SUBATECH_SEMINAR_AUTHOR_URL_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+	<field name="author_filiation2"
+		type="text"
+		label="COM_SUBATECH_SEMINAR_AUTHOR_FILIATION_LABEL"
+		description="COM_SUBATECH_SEMINAR_AUTHOR_FILIATION_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+	<field name="author_filiation_url2"
+		type="text"
+		label="COM_SUBATECH_SEMINAR_AUTHOR_FILIATION_URL_LABEL"
+		description="COM_SUBATECH_SEMINAR_AUTHOR_FILIATION_URL_DESC"
+		class="inputbox"
+		size="30"
+		required="false"
+	/>
+</fieldset>
+
 <fieldset name="state">
 	<field
 			id="state"
@@ -127,9 +193,6 @@
 			<option
 				value="2">
 				JARCHIVED</option>
-			<option
-				value="-2">
-				JTRASHED</option>
 		</field>
 		
 			<field
@@ -155,5 +218,6 @@
 			filter="user_utc" />
 
 </fieldset>
+
 
 </form>

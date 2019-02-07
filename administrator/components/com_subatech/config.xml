@@ -1,49 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-<fieldset
-	name="seminars"
-	label="COM_SUBATECH_CONFIG_SEMINARS_FIELDSET_LABEL"
-	description="COM_SUBATECH_CONFIG_SEMINARS_FIELDSET_DESC">
-	<field
-		name="show_location"
-	    type="radio"
-	    default="1"
-	    label="COM_SUBATECH_CONFIG_SHOW_LOCATION_LABEL"
-	    description="COM_SUBATECH_CONFIG_SHOW_LOCATION_DESC">
-	    <option value="0">JHIDE</option>
-	    <option value="1">JSHOW</option>
-	</field>
-</fieldset>
-
-<fieldset
-	name="featured"
-	label="COM_SUBATECH_CONFIG_FEATURED_FIELDSET_LABEL"
-	description="COM_SUBATECH_CONFIG_FEATURED_FIELDSET_DESC">
-	<field name="age"
-				type="text" 
-				default="60"
-				size="8"
-				label="COM_SUBATECH_FEATURED_VIEW_AGE_LABEL"
-				description="COM_SUBATECH_FEATURED_VIEW_AGE_DESC"
-				filter="integer" />
-</fieldset>
-
-
-<fieldset name="permissions"
-label="JCONFIG_PERMISSIONS_LABEL"
-		description="JCONFIG_PERMISSIONS_DESC"
-	>
-	<field
-		name="rules"
-			type="rules"
-			label="JCONFIG_PERMISSIONS_LABEL"
-			class="inputbox"
-			validate="rules"
-			filter="rules"
-			component="com_subatech"
-			section="component"
-		/>
-
-</fieldset>
-
+  <fieldset name="seminars" label="COM_SUBATECH_CONFIG_SEMINARS_FIELDSET_LABEL" description="COM_SUBATECH_CONFIG_SEMINARS_FIELDSET_DESC">
+    <field name="show_location" type="radio" default="1" label="COM_SUBATECH_CONFIG_SHOW_LOCATION_LABEL" description="COM_SUBATECH_CONFIG_SHOW_LOCATION_DESC">
+      <option value="0">JHIDE</option>
+      <option value="1">JSHOW</option>
+    </field>
+  </fieldset>
+  <fieldset name="featured" label="COM_SUBATECH_CONFIG_FEATURED_FIELDSET_LABEL" description="COM_SUBATECH_CONFIG_FEATURED_FIELDSET_DESC">
+    <field name="age" type="text" default="60" size="8" label="COM_SUBATECH_FEATURED_VIEW_AGE_LABEL" description="COM_SUBATECH_FEATURED_VIEW_AGE_DESC" filter="integer" />
+  </fieldset>
+  <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+    <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_subatech" section="component" />
+  </fieldset>
 </config>

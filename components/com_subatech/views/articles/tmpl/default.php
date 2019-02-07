@@ -10,7 +10,6 @@ $document = JFactory::getDocument();
 
 <h1><?php echo JText::_('COM_SUBATECH_AUTHORIZED_ARTICLES_LIST_HEADER'); ?></h1>
 
-
 <table class="authorized_article_list">
 <thead>
 <tr>

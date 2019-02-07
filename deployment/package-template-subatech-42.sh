@@ -11,10 +11,10 @@ echo "currentversion=$currentversion version=$version"
 
 a=`pwd`
 
-topdir="$HOME/Mind/@Archive/2018/joomla-dev"
+topdir="$HOME/github.com/aphecetche/joomla-dev"
 
-dest="$topdir/packages/subatech-42-$version.tar.gz"
-src="$topdir/importlabo/www/templates/subatech-42-$currentversion"
+dest="$HOME/github.com/aphecetche/joomla-subaweb/packages/subatech-42-$version.tar.gz"
+src="$HOME/github.com/aphecetche/docker-subaweb/www/templates/subatech-42-$currentversion"
 tmpdir="$HOME/tmp/joomla-dev/"
 
 rm -rf $tmpdir

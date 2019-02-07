@@ -1,0 +1,129 @@
+section.seminar-container {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+h1.seminar-type {
+    text-align: center;
+    font-size: 34px;
+    font-size: 3.4em;
+    line-height: 1.0;
+    padding: 0;
+    margin: 0.5em 0 0 0;
+}
+
+h2.seminar-byline {
+    line-height: 1.0;
+    padding: 0;
+    margin: 0.2em 0 0 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h3.seminar-date {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-size: 3.0rem;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h4.seminar-location {
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: -1em 0 1em 0;
+    padding: 0;
+}
+
+h2.seminar-chair {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0;
+    margin: 1em 0;
+}
+
+
+section.seminar-main header {
+    text-align: center;
+}
+
+section.seminar-main header h1 {
+    font-size: 32px;
+    font-size: 3.2rem;
+    margin: 0;
+    line-height: 1.10;
+}
+
+section.seminar-main header h2 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin: 0;
+    line-height: 1.14;
+    padding-top: 0.15em;
+}
+
+section.seminar-main header h3 {
+    font-size: 12px;
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.33;
+    padding-top: 0.25em;
+}
+
+section.seminar-main p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.52;
+    text-align: justify;
+}
+
+p.seminar-separator {
+    text-align: center;
+    width: 100%;
+    margin: 2em 0;
+}
+
+section.seminar-prelude {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section.seminar-prelude header {
+    border: none;
+}
+
+section.seminar-prelude header h1 {
+    font-size: 20px;
+    font-size: 2.0rem;
+    margin: 0;
+    line-height: 1.2;
+    text-align: center;
+}
+
+section.seminar-prelude header h2,
+section.seminar-prelude header h3 {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+
+section.seminar-prelude header h3::before {
+    content: "(";
+}
+
+section.seminar-prelude header h3::after {
+    content: ")";
+}
+
+section.seminar-prelude p {
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-align: justify;
+}
