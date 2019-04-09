@@ -69,9 +69,16 @@ $type = $this->escape($item->type);
 $author = $this->escape($item->author);
 $label= '<span class="label-' . $item->type . '"></span>';
 if ($type == "communication-scientifique") {
-    $title = $title . "/" . $item->title2;
-    if (strlen($item->author2)) {
+    if (strlen($title)) {
+        $title = $title . "/" . $item->title2;
+    } else {
+        $title = $item->title2;
+    }
+    if (strlen($author)) {
         $author = $author . "/" . $item->author2;
+    }
+    else {
+        $author = $item->author2;
     }
 };
 ?>

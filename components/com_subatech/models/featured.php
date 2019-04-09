@@ -52,8 +52,10 @@ class SubatechModelFeatured extends JModelList
             $row -> link = 'index.php?option=com_subatech&view=seminar&id=' . $row -> id;
             $row -> category = JText::_('COM_SUBATECH_SEMINAR');
             $row -> description = self::substring($row -> summary, $this->descriptionMaxChars, $this->replacer, $this->isStrips);
-            if (strlen($row->title2)) {
+            if (strlen($row->title2) && strlen($row->title)) {
                 $row -> title = $row->title2 . " (+ " . $row->title . ")";
+            } else if (strlen($row->title2)) {
+                $row -> title = $row->title2;
             }
             $row->label = $row->type;
 
