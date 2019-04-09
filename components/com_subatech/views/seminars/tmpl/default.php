@@ -6,6 +6,15 @@ $document = JFactory::getDocument();
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 $style='
+span.label-heures-thésards::before {
+content: "Heures thésards";
+background: #4CAF50;
+margin-left: 5px;
+padding:3px;
+border-radius: 3px;
+font-size: 10px;
+color:white;
+}
 span.label-communication-scientifique::before {
 content: "Colloque Café - Scientifique";
 background: #4CAF50;

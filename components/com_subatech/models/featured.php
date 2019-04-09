@@ -34,10 +34,14 @@ class SubatechModelFeatured extends JModelList
 
         $query = $db -> getQuery(true);
 
-        $query -> select('id, author, date, location, summary, title, title2, type, state');
+        $query -> select('id, author, date, location, summary, title, type, state, title2');
         $query -> from('#__seminars');
-        $query -> where('state=1');
-        $query -> where($datecondition);
+        if (strlen($datecondition)>0) {
+            $query -> where('(state=1) AND (' . $datecondition .')');
+        }
+        else {
+            $query -> where('state=1');
+        }
 
         $db -> setQuery($query);
 
