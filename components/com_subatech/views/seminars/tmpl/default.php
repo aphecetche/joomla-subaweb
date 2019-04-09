@@ -6,6 +6,15 @@ $document = JFactory::getDocument();
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 $style='
+span.label-heures-thésards::before {
+content: "Heures thésards";
+background: #4CAF50;
+margin-left: 5px;
+padding:3px;
+border-radius: 3px;
+font-size: 10px;
+color:white;
+}
 span.label-communication-scientifique::before {
 content: "Colloque Café - Scientifique";
 background: #4CAF50;
@@ -60,9 +69,16 @@ $type = $this->escape($item->type);
 $author = $this->escape($item->author);
 $label= '<span class="label-' . $item->type . '"></span>';
 if ($type == "communication-scientifique") {
-    $title = $title . "/" . $item->title2;
-    if (strlen($item->author2)) {
+    if (strlen($title)) {
+        $title = $title . "/" . $item->title2;
+    } else {
+        $title = $item->title2;
+    }
+    if (strlen($author)) {
         $author = $author . "/" . $item->author2;
+    }
+    else {
+        $author = $item->author2;
     }
 };
 ?>

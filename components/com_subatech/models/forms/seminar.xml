@@ -16,7 +16,6 @@
 		description="COM_SUBATECH_SEMINAR_TITLE_DESC"
 		class="inputbox"
 		size="60"
-		required="true"
 	/>
 	<field name="alias"
 		type="text"
@@ -86,7 +85,6 @@
 		description="COM_SUBATECH_SEMINAR_AUTHOR_DESC"
 		class="inputbox"
 		size="30"
-		required="true"
 	/>
 	<field name="author_url"
 		type="text"
@@ -102,7 +100,6 @@
 		description="COM_SUBATECH_SEMINAR_AUTHOR_FILIATION_DESC"
 		class="inputbox"
 		size="30"
-		required="true"
 	/>
 	<field name="author_filiation_url"
 		type="text"

@@ -34,10 +34,14 @@ class SubatechModelFeatured extends JModelList
 
         $query = $db -> getQuery(true);
 
-        $query -> select('id, author, date, location, summary, title, title2, type, state');
+        $query -> select('id, author, date, location, summary, title, type, state, title2');
         $query -> from('#__seminars');
-        $query -> where('state=1');
-        $query -> where($datecondition);
+        if (strlen($datecondition)>0) {
+            $query -> where('(state=1) AND (' . $datecondition .')');
+        }
+        else {
+            $query -> where('state=1');
+        }
 
         $db -> setQuery($query);
 
@@ -48,8 +52,10 @@ class SubatechModelFeatured extends JModelList
             $row -> link = 'index.php?option=com_subatech&view=seminar&id=' . $row -> id;
             $row -> category = JText::_('COM_SUBATECH_SEMINAR');
             $row -> description = self::substring($row -> summary, $this->descriptionMaxChars, $this->replacer, $this->isStrips);
-            if (strlen($row->title2)) {
+            if (strlen($row->title2) && strlen($row->title)) {
                 $row -> title = $row->title2 . " (+ " . $row->title . ")";
+            } else if (strlen($row->title2)) {
+                $row -> title = $row->title2;
             }
             $row->label = $row->type;
 

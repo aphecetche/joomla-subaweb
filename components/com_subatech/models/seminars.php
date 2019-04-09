@@ -15,7 +15,7 @@ class SubatechModelSeminars extends JModelList
 
         $year = $this->getState('year');
 
-        $query->select('id, author, date, location, summary, title, state, type,title2');
+        $query->select('id, author, author2, date, location, summary, title, state, type,title2');
         $query->from('#__seminars');
 
         $user   = JFactory::getUser();
