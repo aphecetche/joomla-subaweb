@@ -68,16 +68,16 @@ $title = $this->escape($item->title);
 $type = $this->escape($item->type);
 $author = $this->escape($item->author);
 $label= '<span class="label-' . $item->type . '"></span>';
-if ($type == "communication-scientifique") {
-    if (strlen($title)) {
+if ($type == "communication-scientifique" || $type=="heures-thésards") {
+    if (strlen($title) && strlen($item->title2)) {
         $title = $title . "/" . $item->title2;
-    } else {
+    } else if (strlen($item->title2)){
         $title = $item->title2;
     }
-    if (strlen($author)) {
+    if (strlen($author) && strlen($item->author2)) {
         $author = $author . "/" . $item->author2;
     }
-    else {
+    else if (strlen($item->author2)) {
         $author = $item->author2;
     }
 };
