@@ -10,7 +10,7 @@
 	<copyright>(c) 2012-2019 Laurent Aphecetche</copyright>
 	<license>License Info</license>
 	<!--  The version string is recorded in the components table -->
-	<version>3.58</version>
+	<version>3.6</version>
 	<!-- The description is optional and defaults to the name -->
 	<description>COM_SUBATECH_DESCRIPTION</description>
  

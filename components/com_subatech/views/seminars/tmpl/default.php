@@ -42,6 +42,15 @@ border-radius: 3px;
 font-size: 10px;
 color:white;
 }
+span.label-soutenance-thèse::before {
+content: "Soutenance de thèse";
+background: #ff9800;
+margin-left: 5px;
+padding:3px;
+border-radius: 3px;
+font-size: 10px;
+color:white;
+}
 ';
 
 $document->addStyleDeclaration($style);
