@@ -11,7 +11,6 @@ echo "currentversion=$currentversion version=$version"
 
 a=`pwd`
 
-topdir="$HOME/github.com/aphecetche/joomla-dev"
 
 dest="$HOME/github.com/aphecetche/joomla-subaweb/packages/subatech-42-$version.tar.gz"
 src="$HOME/github.com/aphecetche/docker-subaweb/www/templates/subatech-42-$currentversion"
