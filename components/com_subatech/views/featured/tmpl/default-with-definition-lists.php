@@ -12,8 +12,6 @@ function displayTab($items,$what)
   
   echo "<h2>" . JText::_($what) . "</h2>";
 
-echo "toto";
-  
   echo "<ul id=$index>"; 
 $i=0;
 foreach ($items[$index] as $item) {

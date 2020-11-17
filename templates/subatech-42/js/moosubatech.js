@@ -378,7 +378,7 @@ var subatech = {
 
 		var body = document.body;
 			
-		if ( ww > 959 ) {
+		if ( ww > 9999999 ) {
 			
 			if (body.hasClass('featured-accordion')) {
 				featured.removeAccordion();
